@@ -1,0 +1,44 @@
+# AVS field file
+#
+# AutoDock Atomic Affinity and Electrostatic Grids
+#
+# Created by D:/DrugDiscovery/molecular-docking/ConA_08.05.21/autogrid4.exe.
+#
+#SPACING 0.500
+#NELEMENTS 150 150 150
+#CENTER 1.361 43.439 -29.530
+#MACROMOLECULE 6ahg.pdbqt
+#GRID_PARAMETER_FILE D:/DrugDiscovery/molecular-docking/ConA_08.05.21/6ahg.gpf
+#
+ndim=3			# number of dimensions in the field
+dim1=151			# number of x-elements
+dim2=151			# number of y-elements
+dim3=151			# number of z-elements
+nspace=3		# number of physical coordinates per point
+veclen=9		# number of affinity values at each point
+data=float		# data type (byte, integer, float, double)
+field=uniform		# field type (uniform, rectilinear, irregular)
+coord 1 file=6ahg.maps.xyz filetype=ascii offset=0
+coord 2 file=6ahg.maps.xyz filetype=ascii offset=2
+coord 3 file=6ahg.maps.xyz filetype=ascii offset=4
+label=A-affinity	# component label for variable 1
+label=C-affinity	# component label for variable 2
+label=HD-affinity	# component label for variable 3
+label=N-affinity	# component label for variable 4
+label=NA-affinity	# component label for variable 5
+label=OA-affinity	# component label for variable 6
+label=SA-affinity	# component label for variable 7
+label=Electrostatics	# component label for variable 7
+label=Desolvation	# component label for variable 8
+#
+# location of affinity grid files and how to read them
+#
+variable 1 file=6ahg.A.map filetype=ascii skip=6
+variable 2 file=6ahg.C.map filetype=ascii skip=6
+variable 3 file=6ahg.HD.map filetype=ascii skip=6
+variable 4 file=6ahg.N.map filetype=ascii skip=6
+variable 5 file=6ahg.NA.map filetype=ascii skip=6
+variable 6 file=6ahg.OA.map filetype=ascii skip=6
+variable 7 file=6ahg.SA.map filetype=ascii skip=6
+variable 8 file=6ahg.e.map filetype=ascii skip=6
+variable 9 file=6ahg.d.map filetype=ascii skip=6
