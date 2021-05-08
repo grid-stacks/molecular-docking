@@ -1,0 +1,8 @@
+receptor = 6lu7_energy_minimized.pdbqt
+exhaustiveness  = 8
+center_x = -26.0121
+center_y = 12.5936
+center_z = 59.1314
+size_x = 51.7278432146
+size_y = 66.9385297966
+size_z = 88.0411983911

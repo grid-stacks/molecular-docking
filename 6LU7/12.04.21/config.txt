@@ -1,0 +1,14 @@
+receptor = 6lu7_hydrohen_charged.pdbqt
+ligand = Conformer3D_CID_969516.pdbqt
+
+center_x = -10.710
+center_y = 12.116
+center_z = 75.752
+
+size_x = 40
+size_y = 40
+size_z = 40
+
+energy_range = 4
+
+exhaustiveness = 8

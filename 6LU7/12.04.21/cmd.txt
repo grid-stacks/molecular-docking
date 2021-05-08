@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\The Scripps Research Institute\Vina\vina.exe" --receptor 6lu7_hydrohen_charged.pdbqt --ligand Conformer3D_CID_969516.pdbqt --config config.txt --log log.txt --out output.pdbqt

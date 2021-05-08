@@ -1,0 +1,4 @@
+6lu7_hydrohen_charged
+spacing    0.375
+npts       40 40 40
+center    -10.710 12.116 75.752
