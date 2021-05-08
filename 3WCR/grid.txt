@@ -1,0 +1,4 @@
+3wcr_cleaned
+spacing    0.500
+npts       100 100 126
+center    27.557  2.211 116.726
