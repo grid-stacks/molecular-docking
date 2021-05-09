@@ -1,0 +1,1713 @@
+          AutoDock 4.2 Release 4.2.6   
+         (C) 1989-2012 The Scripps Research Institute
+        AutoDock comes with ABSOLUTELY NO WARRANTY.
+        AutoDock is free software, and you are welcome
+        to redistribute it under certain conditions;
+        for details type 'autodock4 -C'
+
+                     main.cc  $Revision: 1.213 $
+
+                   Compiled on Jul 18 2014 at 15:34:58
+
+
+This file was created at:			4:31 46" p.m., 05/09/2021
+                   on host:		"DESKTOP-MNK283J"
+Current Working Directory = "D:\DrugDiscovery\molecular-docking\1QDO_08.05.21"
+
+      ________________________________________________________________
+
+                   SETTING UP DEFAULT PARAMETER LIBRARY
+      ________________________________________________________________
+
+
+Random number generator was seeded with values 460, 1620556306.
+Docking parameter file (DPF) used for this docking:		D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+DPF> autodock_parameter_version 4.2       # used by autodock to validate parameter set
+
+	Autodock parameter version 4.2.
+DPF> outlev 1                             # diagnostic output level
+
+Output Level = 1  ADT-COMPATIBLE OUTPUT DURING DOCKING.
+DPF> intelec                              # calculate internal electrostatics
+
+Electrostatic energies will be calculated for all non-bonds between moving atoms.
+DPF> seed pid time                        # seeds for random generator
+
+Random number generator was seeded with values 460, 1620556306.
+DPF> ligand_types C OA                    # atoms types in ligand
+
+DPF> fld 1qdo.maps.fld                    # grid_data_file
+
+Opening Grid Map Dimensions file:		1qdo.maps.fld
+Grid Point Spacing =				0.500 Angstroms
+
+Even Number of User-specified Grid Points =	140 x-points
+						140 y-points
+						140 z-points
+
+Coordinates of Central Grid Point of Maps =	(0.637, -0.004, 31.818)
+Macromolecule file used to create Grid Maps =	1qdo.pdbqt
+Grid Parameter file used to create Grid Maps =	D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo.gpf
+Minimum coordinates in grid = (-34.363, -35.004, -3.182)
+Maximum coordinates in grid = (35.637, 34.996, 66.818)
+
+DPF> map 1qdo.C.map                       # atom-specific affinity map
+
+DPF> map 1qdo.OA.map                      # atom-specific affinity map
+
+DPF> elecmap 1qdo.e.map                   # electrostatics map
+
+DPF> desolvmap 1qdo.d.map                 # desolvation map
+
+DPF> move mannose_part.pdbqt              # small molecule
+
+1,4-interactions will be _ignored_ in the non-bonded internal energy calculation.
+
+Ligand PDBQT file = "mannose_part.pdbqt"
+
+INPUT LIGAND PDBQT FILE:
+________________________
+
+INPUT-LIGAND-PDBQT: REMARK  Name = E:\---WorkFiles\Computational Chemistry\Drug Discovery\Training\1QDO_08.05.21\mannose_part.pdb
+INPUT-LIGAND-PDBQT: REMARK  5 active torsions:
+INPUT-LIGAND-PDBQT: REMARK  status: ('A' for Active; 'I' for Inactive)
+INPUT-LIGAND-PDBQT: REMARK    1  A    between atoms: C1_1  and  O1_8
+INPUT-LIGAND-PDBQT: REMARK    2  A    between atoms: C3_3  and  O3_10
+INPUT-LIGAND-PDBQT: REMARK    3  A    between atoms: C5_5  and  C6_6
+INPUT-LIGAND-PDBQT: REMARK    4  A    between atoms: O3_10  and  C1_14
+INPUT-LIGAND-PDBQT: REMARK    5  A    between atoms: C5_18  and  C6_19
+INPUT-LIGAND-PDBQT: REMARK                            x       y       z     vdW  Elec       q    Type
+INPUT-LIGAND-PDBQT: REMARK                         _______ _______ _______ _____ _____    ______ ____
+INPUT-LIGAND-PDBQT: ROOT
+INPUT-LIGAND-PDBQT: ATOM      1  C1  MMA E   1      29.074 -29.862  11.118  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM      2  C2  MMA E   1      28.494 -28.442  10.951  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM      3  C3  MMA E   1      27.766 -28.334   9.589  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM      4  C4  MMA E   1      28.731 -28.761   8.453  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM      5  C5  MMA E   1      29.400 -30.128   8.754  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM      9  O2  MMA E   1      29.538 -27.464  11.056  0.00  0.00    +0.000 OA
+INPUT-LIGAND-PDBQT: ATOM     11  O4  MMA E   1      28.023 -28.849   7.213  0.00  0.00    +0.000 OA
+INPUT-LIGAND-PDBQT: ATOM     12  O5  MMA E   1      30.014 -30.140  10.069  0.00  0.00    +0.000 OA
+INPUT-LIGAND-PDBQT: ENDROOT
+INPUT-LIGAND-PDBQT: BRANCH   5   6
+INPUT-LIGAND-PDBQT: ATOM      6  C6  MMA E   1      30.498 -30.482   7.758  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM     13  O6  MMA E   1      31.637 -29.615   7.952  0.00  0.00    +0.000 OA
+INPUT-LIGAND-PDBQT: ENDBRANCH   5   6
+INPUT-LIGAND-PDBQT: BRANCH   1   8
+INPUT-LIGAND-PDBQT: ATOM      7  C7  MMA E   1      28.472 -32.104  11.411  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM      8  O1  MMA E   1      28.052 -30.814  11.058  0.00  0.00    +0.000 OA
+INPUT-LIGAND-PDBQT: ENDBRANCH   1   8
+INPUT-LIGAND-PDBQT: BRANCH   3  10
+INPUT-LIGAND-PDBQT: ATOM     10  O3  MMA E   1      27.288 -26.992   9.381  0.00  0.00    +0.000 OA
+INPUT-LIGAND-PDBQT: BRANCH  10  14
+INPUT-LIGAND-PDBQT: ATOM     14  C1  MAN E   2      25.892 -26.953   9.122  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM     15  C2  MAN E   2      25.471 -25.530   8.728  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM     16  C3  MAN E   2      25.622 -24.607   9.928  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM     17  C4  MAN E   2      24.827 -25.122  11.134  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM     18  C5  MAN E   2      25.171 -26.594  11.415  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM     20  O2  MAN E   2      24.127 -25.517   8.258  0.00  0.00    +0.000 OA
+INPUT-LIGAND-PDBQT: ATOM     21  O3  MAN E   2      25.197 -23.302   9.591  0.00  0.00    +0.000 OA
+INPUT-LIGAND-PDBQT: ATOM     22  O4  MAN E   2      25.154 -24.335  12.279  0.00  0.00    +0.000 OA
+INPUT-LIGAND-PDBQT: ATOM     23  O5  MAN E   2      25.078 -27.406  10.213  0.00  0.00    +0.000 OA
+INPUT-LIGAND-PDBQT: BRANCH  18  19
+INPUT-LIGAND-PDBQT: ATOM     19  C6  MAN E   2      24.283 -27.238  12.479  0.00  0.00    +0.000 C 
+INPUT-LIGAND-PDBQT: ATOM     24  O6  MAN E   2      22.900 -27.096  12.185  0.00  0.00    +0.000 OA
+INPUT-LIGAND-PDBQT: ENDBRANCH  18  19
+INPUT-LIGAND-PDBQT: ENDBRANCH  10  14
+INPUT-LIGAND-PDBQT: ENDBRANCH   3  10
+INPUT-LIGAND-PDBQT: TORSDOF 5
+________________________________________________________________________________
+
+Total charge on ligand                               =	+0.000 e
+REMARK  Name = E:\---WorkFiles\Computational Chemistry\Drug Discovery\Training\1QDO_08.05.21\mannose_part.pdb
+REMARK  5 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: C1_1  and  O1_8
+REMARK    2  A    between atoms: C3_3  and  O3_10
+REMARK    3  A    between atoms: C5_5  and  C6_6
+REMARK    4  A    between atoms: O3_10  and  C1_14
+REMARK    5  A    between atoms: C5_18  and  C6_19
+REMARK                            x       y       z     vdW  Elec       q    Type
+REMARK                         _______ _______ _______ _____ _____    ______ ____
+
+
+Number of Rotatable Bonds in Small Molecule =	5 torsions
+Number of atoms in ligand:  24
+
+Number of non-hydrogen atoms in ligand:  24
+
+Number of vibrational degrees of freedom of ligand:  66
+
+
+Number of torsional degrees of freedom = 5
+Estimated loss of torsional free energy upon binding = +1.4915 kcal/mol
+
+
+DPF> about 27.1129 -27.737 10.004         # small molecule center
+
+Small molecule center of rotation =	(+27.113, -27.737, +10.004)
+
+DPF> tran0 random                         # initial coordinates/A or random
+
+Initial translation =			(6.755, -4.809, 43.662) Angstroms
+DPF> quaternion0 random                   # initial orientation
+
+Each run will begin with a new, random initial orientation.
+Initial quaternion,  (x,y,z,w) =	( 0.898, -0.409, 0.087, 0.137 ),
+DPF> dihe0 random                         # initial dihedrals (relative) or random
+
+DPF> torsdof 5                            # torsional degrees of freedom
+
+Number of torsional degrees of freedom = 5
+Free energy coefficient for torsional degrees of freedom = 0.2983, the factory default value.
+
+Estimated loss of torsional free energy upon binding = +1.4915 kcal/mol
+
+DPF> rmstol 2.0                           # cluster_tolerance/A
+
+Maximum RMS tolerance for conformational cluster analysis = 2.00 Angstroms
+DPF> extnrg 1000.0                        # external grid energy
+
+External grid energy (beyond grid map walls) = 1000.00
+
+DPF> e0max 0.0 10000                      # max initial energy; max number of retries
+
+Using user-specified maximum number of retries for simanneal initialization, 10000 retries.
+If the simanneal initial energy is greater than e0max, 0.000,
+then a new, random initial state will be created.
+
+DPF> ga_pop_size 150                      # number of individuals in population
+
+A population of 150 individuals will be used
+DPF> ga_num_evals 2500000                 # maximum number of energy evaluations
+
+There will be at most 2500000 function evaluations used.
+DPF> ga_num_generations 27000             # maximum number of generations
+
+The GA will run for at most 27000 generations.
+DPF> ga_elitism 1                         # number of top individuals to survive to next generation
+
+The 1 best will be preserved each GA generation.
+DPF> ga_mutation_rate 0.02                # rate of gene mutation
+
+The mutation rate is 0.020000.
+DPF> ga_crossover_rate 0.8                # rate of crossover
+
+The crossover rate is 0.800000.
+DPF> ga_window_size 10                    # 
+
+The GA's selection window is 10 generations.
+DPF> ga_cauchy_alpha 0.0                  # Alpha parameter of Cauchy distribution
+
+The alpha parameter (for the Cauchy distribution) is being set to 0.000000.
+DPF> ga_cauchy_beta 1.0                   # Beta parameter Cauchy distribution
+
+The beta parameter (for the Cauchy distribution) is being set to 1.000000.
+DPF> set_ga                               # set the above parameters for GA or LGA
+
+DPF> sw_max_its 300                       # iterations of Solis & Wets local search
+
+Solis & Wets algorithms will perform at most 300 iterations.
+DPF> sw_max_succ 4                        # consecutive successes before changing rho
+
+Solis & Wets algorithms expand rho every 4 in a row successes.
+DPF> sw_max_fail 4                        # consecutive failures before changing rho
+
+Solis & Wets algorithms contract rho every 4 in a row failures.
+DPF> sw_rho 1.0                           # size of local search space to sample
+
+rho is set to 1.000000.
+DPF> sw_lb_rho 0.01                       # lower bound on rho
+
+rho will never get smaller than 0.010000.
+DPF> ls_search_freq 0.06                  # probability of performing local search on individual
+
+Local search will be performed with frequency 0.060000.
+DPF> set_psw1                             # set the above pseudo-Solis & Wets parameters
+
+Creating a new Local Search object using the pseudo-Solis-Wets algorithm (pSW1) with the current settings.
+
+DPF> unbound_model bound                  # state of unbound ligand
+
+DPF> ga_run 10                            # do this many hybrid GA-LS runs
+
+centering ligand on specified point: 27.113 -27.737 10.004
+Furthest true ligand atom from "about" center is 5.311 Angstroms (maxrad).
+Number of requested GA dockings = 10 runs
+Unbound model to be used is 'same as bound' [AutoDock 4.2 default].
+
+	BEGINNING GENETIC ALGORITHM DOCKING 1 of 10
+Run: 1 Seed: 57932156 178583896 [ Run 1 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -12.262
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -3.185 12.042 28.542 quatxyzw 0.219015 0.403908 0.597978 0.656744 center 27.113 -27.737 10.004 ntor 5 175.2107 83.4222 -141.7758 -179.8343 21.3864
+State:	 -3.185  12.042  28.542   0.290  0.536  0.793 97.896    175.21   83.42 -141.78 -179.83   21.39
+
+DOCKED: MODEL        1
+DOCKED: USER    Run = 1
+DOCKED: USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -9.78 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   67.33 nM (nanomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -11.28 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  -11.28 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.99 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.99 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move mannose_part.pdbqt
+DOCKED: USER    NEWDPF about 27.112900 -27.737000 10.004000
+DOCKED: USER    NEWDPF tran0 -3.185325 12.042074 28.541583
+DOCKED: USER    NEWDPF quaternion0 0.219015 0.403908 0.597978 0.656744
+DOCKED: USER    NEWDPF axisangle0 0.290427 0.535606 0.792955 97.895937
+DOCKED: USER    NEWDPF quat0 0.290427 0.535606 0.792955 97.895937
+DOCKED: USER    NEWDPF dihe0 175.21 83.42 -141.78 -179.83 21.39 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  Name = E:\---WorkFiles\Computational Chemistry\Drug Discovery\Training\1QDO_08.05.21\mannose_part.pdb
+DOCKED: REMARK  5 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C1_1  and  O1_8
+DOCKED: REMARK    2  A    between atoms: C3_3  and  O3_10
+DOCKED: REMARK    3  A    between atoms: C5_5  and  C6_6
+DOCKED: REMARK    4  A    between atoms: O3_10  and  C1_14
+DOCKED: REMARK    5  A    between atoms: C5_18  and  C6_19
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  MMA E   1      -5.611  11.306  30.324 -0.46 -0.00    +0.000 C 
+DOCKED: ATOM      2  C2  MMA E   1      -4.175  11.798  30.045 -0.35 -0.00    +0.000 C 
+DOCKED: ATOM      3  C3  MMA E   1      -3.675  11.212  28.703 -0.22 -0.00    +0.000 C 
+DOCKED: ATOM      4  C4  MMA E   1      -3.821   9.669  28.728 -0.24 -0.00    +0.000 C 
+DOCKED: ATOM      5  C5  MMA E   1      -5.245   9.235  29.165 -0.33 -0.00    +0.000 C 
+DOCKED: ATOM      6  O2  MMA E   1      -3.306  11.429  31.125 -0.75 -0.00    +0.000 OA
+DOCKED: ATOM      7  O4  MMA E   1      -3.544   9.127  27.433 -0.35 -0.00    +0.000 OA
+DOCKED: ATOM      8  O5  MMA E   1      -5.636   9.873  30.409 -0.25 -0.00    +0.000 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   5   6
+DOCKED: ATOM      9  C6  MMA E   1      -5.364   7.733  29.390 -0.27 +0.00    +0.000 C 
+DOCKED: ATOM     10  O6  MMA E   1      -6.266   7.159  28.419 -0.79 +0.00    +0.000 OA
+DOCKED: ENDBRANCH   5   6
+DOCKED: BRANCH   1   8
+DOCKED: ATOM     11  C7  MMA E   1      -7.012  12.980  29.482 -0.52 -0.00    +0.000 C 
+DOCKED: ATOM     12  O1  MMA E   1      -6.469  11.702  29.294 -0.48 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   1   8
+DOCKED: BRANCH   3  10
+DOCKED: ATOM     13  O3  MMA E   1      -2.308  11.596  28.466 -0.25 -0.00    +0.000 OA
+DOCKED: BRANCH  10  14
+DOCKED: ATOM     14  C1  MAN E   2      -2.202  12.640  27.509 -0.29 -0.00    +0.000 C 
+DOCKED: ATOM     15  C2  MAN E   2      -3.598  13.172  27.155 -0.31 -0.00    +0.000 C 
+DOCKED: ATOM     16  C3  MAN E   2      -4.373  12.099  26.405 -0.43 -0.00    +0.000 C 
+DOCKED: ATOM     17  C4  MAN E   2      -3.612  11.625  25.160 -0.46 -0.00    +0.000 C 
+DOCKED: ATOM     18  C5  MAN E   2      -2.172  11.231  25.529 -0.58 -0.00    +0.000 C 
+DOCKED: ATOM     19  O2  MAN E   2      -3.499  14.354  26.367 -0.87 -0.00    +0.000 OA
+DOCKED: ATOM     20  O3  MAN E   2      -5.645  12.590  26.035 -0.36 -0.00    +0.000 OA
+DOCKED: ATOM     21  O4  MAN E   2      -4.282  10.494  24.606 -0.75 -0.00    +0.000 OA
+DOCKED: ATOM     22  O5  MAN E   2      -1.514  12.269  26.306 -0.48 -0.00    +0.000 OA
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     23  C6  MAN E   2      -1.290  10.930  24.318 -0.61 -0.00    +0.000 C 
+DOCKED: ATOM     24  O6  MAN E   2      -1.370   9.569  23.918 -0.87 -0.00    +0.000 OA
+DOCKED: ENDBRANCH  18  19
+DOCKED: ENDBRANCH  10  14
+DOCKED: ENDBRANCH   3  10
+DOCKED: TORSDOF 5
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 2 of 10
+Run: 2 Seed: 1261419343 926347648 [ Run 2 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.588
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 5.389 5.082 7.984 quatxyzw 0.009201 0.507798 -0.054547 -0.859698 center 27.113 -27.737 10.004 ntor 5 -165.6242 -9.9159 -117.3737 11.4117 -156.6800
+State:	  5.389   5.082   7.984   0.018  0.994 -0.107 -61.435   -165.62   -9.92 -117.37   11.41 -156.68
+
+DOCKED: MODEL        2
+DOCKED: USER    Run = 2
+DOCKED: USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -8.63 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =  474.44 nM (nanomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.12 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  -10.12 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.47 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.47 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move mannose_part.pdbqt
+DOCKED: USER    NEWDPF about 27.112900 -27.737000 10.004000
+DOCKED: USER    NEWDPF tran0 5.389258 5.081749 7.983896
+DOCKED: USER    NEWDPF quaternion0 0.009201 0.507798 -0.054547 -0.859698
+DOCKED: USER    NEWDPF axisangle0 0.018013 0.994119 -0.106786 -61.434544
+DOCKED: USER    NEWDPF quat0 0.018013 0.994119 -0.106786 -61.434544
+DOCKED: USER    NEWDPF dihe0 -165.62 -9.92 -117.37 11.41 -156.68 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  Name = E:\---WorkFiles\Computational Chemistry\Drug Discovery\Training\1QDO_08.05.21\mannose_part.pdb
+DOCKED: REMARK  5 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C1_1  and  O1_8
+DOCKED: REMARK    2  A    between atoms: C3_3  and  O3_10
+DOCKED: REMARK    3  A    between atoms: C5_5  and  C6_6
+DOCKED: REMARK    4  A    between atoms: O3_10  and  C1_14
+DOCKED: REMARK    5  A    between atoms: C5_18  and  C6_19
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  MMA E   1       7.080   2.725   6.893 -0.48 -0.00    +0.000 C 
+DOCKED: ATOM      2  C2  MMA E   1       6.803   4.197   7.263 -0.43 -0.00    +0.000 C 
+DOCKED: ATOM      3  C3  MMA E   1       5.278   4.463   7.236 -0.43 -0.00    +0.000 C 
+DOCKED: ATOM      4  C4  MMA E   1       4.705   4.038   5.859 -0.29 -0.00    +0.000 C 
+DOCKED: ATOM      5  C5  MMA E   1       5.147   2.601   5.474 -0.19 -0.00    +0.000 C 
+DOCKED: ATOM      6  O2  MMA E   1       7.495   5.073   6.363 -0.65 +0.00    +0.000 OA
+DOCKED: ATOM      7  O4  MMA E   1       3.276   4.098   5.881 -0.32 -0.00    +0.000 OA
+DOCKED: ATOM      8  O5  MMA E   1       6.586   2.444   5.575 -0.25 -0.00    +0.000 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   5   6
+DOCKED: ATOM      9  C6  MMA E   1       4.767   2.228   4.046 -0.12 -0.00    +0.000 C 
+DOCKED: ATOM     10  O6  MMA E   1       3.515   1.507   4.042 -0.55 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   5   6
+DOCKED: BRANCH   1   8
+DOCKED: ATOM     11  C7  MMA E   1       6.642   0.511   7.512 -0.56 +0.00    +0.000 C 
+DOCKED: ATOM     12  O1  MMA E   1       6.440   1.869   7.795 -0.63 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   1   8
+DOCKED: BRANCH   3  10
+DOCKED: ATOM     13  O3  MMA E   1       5.007   5.852   7.500 -0.51 -0.00    +0.000 OA
+DOCKED: BRANCH  10  14
+DOCKED: ATOM     14  C1  MAN E   2       5.224   6.668   6.358 -0.35 -0.00    +0.000 C 
+DOCKED: ATOM     15  C2  MAN E   2       5.383   8.135   6.784 -0.41 -0.00    +0.000 C 
+DOCKED: ATOM     16  C3  MAN E   2       4.058   8.651   7.326 -0.41 -0.00    +0.000 C 
+DOCKED: ATOM     17  C4  MAN E   2       2.929   8.474   6.304 -0.41 -0.00    +0.000 C 
+DOCKED: ATOM     18  C5  MAN E   2       2.887   7.025   5.794 -0.34 -0.00    +0.000 C 
+DOCKED: ATOM     19  O2  MAN E   2       5.814   8.932   5.686 -0.22 -0.00    +0.000 OA
+DOCKED: ATOM     20  O3  MAN E   2       4.179  10.013   7.682 -0.51 -0.00    +0.000 OA
+DOCKED: ATOM     21  O4  MAN E   2       1.683   8.791   6.925 -1.00 -0.00    +0.000 OA
+DOCKED: ATOM     22  O5  MAN E   2       4.198   6.570   5.360 -0.18 -0.00    +0.000 OA
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     23  C6  MAN E   2       1.916   6.811   4.633 -0.30 -0.00    +0.000 C 
+DOCKED: ATOM     24  O6  MAN E   2       0.567   7.053   5.009 -0.57 -0.00    +0.000 OA
+DOCKED: ENDBRANCH  18  19
+DOCKED: ENDBRANCH  10  14
+DOCKED: ENDBRANCH   3  10
+DOCKED: TORSDOF 5
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 3 of 10
+Run: 3 Seed: 1437081864 682766997 [ Run 3 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -12.103
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 6.452 -8.926 31.579 quatxyzw 0.611322 0.091570 -0.782071 0.079152 center 27.113 -27.737 10.004 ntor 5 -64.1152 121.4749 -59.6911 47.6694 80.4412
+State:	  6.452  -8.926  31.579   0.613  0.092 -0.785 170.920    -64.12  121.47  -59.69   47.67   80.44
+
+DOCKED: MODEL        3
+DOCKED: USER    Run = 3
+DOCKED: USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -9.05 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =  232.32 nM (nanomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.54 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  -10.54 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.56 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.56 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move mannose_part.pdbqt
+DOCKED: USER    NEWDPF about 27.112900 -27.737000 10.004000
+DOCKED: USER    NEWDPF tran0 6.452044 -8.925983 31.578513
+DOCKED: USER    NEWDPF quaternion0 0.611322 0.091570 -0.782071 0.079152
+DOCKED: USER    NEWDPF axisangle0 0.613246 0.091858 -0.784532 170.920310
+DOCKED: USER    NEWDPF quat0 0.613246 0.091858 -0.784532 170.920310
+DOCKED: USER    NEWDPF dihe0 -64.12 121.47 -59.69 47.67 80.44 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  Name = E:\---WorkFiles\Computational Chemistry\Drug Discovery\Training\1QDO_08.05.21\mannose_part.pdb
+DOCKED: REMARK  5 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C1_1  and  O1_8
+DOCKED: REMARK    2  A    between atoms: C3_3  and  O3_10
+DOCKED: REMARK    3  A    between atoms: C5_5  and  C6_6
+DOCKED: REMARK    4  A    between atoms: O3_10  and  C1_14
+DOCKED: REMARK    5  A    between atoms: C5_18  and  C6_19
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  MMA E   1       4.925  -6.453  30.504 -0.28 -0.00    +0.000 C 
+DOCKED: ATOM      2  C2  MMA E   1       5.210  -7.960  30.670 -0.26 -0.00    +0.000 C 
+DOCKED: ATOM      3  C3  MMA E   1       6.705  -8.173  31.009 -0.32 +0.00    +0.000 C 
+DOCKED: ATOM      4  C4  MMA E   1       7.581  -7.478  29.935 -0.46 -0.00    +0.000 C 
+DOCKED: ATOM      5  C5  MMA E   1       7.145  -6.008  29.704 -0.47 -0.00    +0.000 C 
+DOCKED: ATOM      6  O2  MMA E   1       4.846  -8.668  29.477 -0.59 -0.00    +0.000 OA
+DOCKED: ATOM      7  O4  MMA E   1       8.956  -7.502  30.330 -0.33 -0.00    +0.000 OA
+DOCKED: ATOM      8  O5  MMA E   1       5.721  -5.912  29.439 -0.44 -0.00    +0.000 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   5   6
+DOCKED: ATOM      9  C6  MMA E   1       7.852  -5.359  28.520 -0.66 -0.00    +0.000 C 
+DOCKED: ATOM     10  O6  MMA E   1       8.655  -6.341  27.828 -1.09 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   5   6
+DOCKED: BRANCH   1   8
+DOCKED: ATOM     11  C7  MMA E   1       4.695  -6.355  32.831 -0.26 -0.00    +0.000 C 
+DOCKED: ATOM     12  O1  MMA E   1       5.240  -5.767  31.681 -0.26 +0.00    +0.000 OA
+DOCKED: ENDBRANCH   1   8
+DOCKED: BRANCH   3  10
+DOCKED: ATOM     13  O3  MMA E   1       7.006  -9.579  31.088 -0.37 -0.00    +0.000 OA
+DOCKED: BRANCH  10  14
+DOCKED: ATOM     14  C1  MAN E   2       6.018 -10.300  31.810 -0.30 -0.00    +0.000 C 
+DOCKED: ATOM     15  C2  MAN E   2       6.673 -11.082  32.957 -0.41 -0.00    +0.000 C 
+DOCKED: ATOM     16  C3  MAN E   2       7.549 -12.185  32.382 -0.42 -0.00    +0.000 C 
+DOCKED: ATOM     17  C4  MAN E   2       6.752 -13.105  31.450 -0.32 -0.00    +0.000 C 
+DOCKED: ATOM     18  C5  MAN E   2       5.996 -12.277  30.397 -0.27 -0.00    +0.000 C 
+DOCKED: ATOM     19  O2  MAN E   2       5.682 -11.634  33.818 -0.90 -0.00    +0.000 OA
+DOCKED: ATOM     20  O3  MAN E   2       8.125 -12.941  33.428 -0.49 -0.00    +0.000 OA
+DOCKED: ATOM     21  O4  MAN E   2       7.652 -13.996  30.791 -0.43 -0.00    +0.000 OA
+DOCKED: ATOM     22  O5  MAN E   2       5.238 -11.197  31.006 -0.21 -0.00    +0.000 OA
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     23  C6  MAN E   2       5.027 -13.101  29.550 -0.32 -0.00    +0.000 C 
+DOCKED: ATOM     24  O6  MAN E   2       5.127 -14.493  29.818 -0.68 -0.00    +0.000 OA
+DOCKED: ENDBRANCH  18  19
+DOCKED: ENDBRANCH  10  14
+DOCKED: ENDBRANCH   3  10
+DOCKED: TORSDOF 5
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 4 of 10
+Run: 4 Seed: 56313509 192636698 [ Run 4 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.252
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -2.936 -12.221 34.103 quatxyzw 0.011118 0.830415 -0.458121 0.316880 center 27.113 -27.737 10.004 ntor 5 -145.5296 115.6035 82.0066 -22.4163 -35.6872
+State:	 -2.936 -12.221  34.103   0.012  0.876 -0.483 143.051   -145.53  115.60   82.01  -22.42  -35.69
+
+DOCKED: MODEL        4
+DOCKED: USER    Run = 4
+DOCKED: USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -7.98 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    1.42 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.47 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.47 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.78 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.78 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move mannose_part.pdbqt
+DOCKED: USER    NEWDPF about 27.112900 -27.737000 10.004000
+DOCKED: USER    NEWDPF tran0 -2.935969 -12.220565 34.103223
+DOCKED: USER    NEWDPF quaternion0 0.011118 0.830415 -0.458121 0.316880
+DOCKED: USER    NEWDPF axisangle0 0.011722 0.875535 -0.483012 143.051357
+DOCKED: USER    NEWDPF quat0 0.011722 0.875535 -0.483012 143.051357
+DOCKED: USER    NEWDPF dihe0 -145.53 115.60 82.01 -22.42 -35.69 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  Name = E:\---WorkFiles\Computational Chemistry\Drug Discovery\Training\1QDO_08.05.21\mannose_part.pdb
+DOCKED: REMARK  5 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C1_1  and  O1_8
+DOCKED: REMARK    2  A    between atoms: C3_3  and  O3_10
+DOCKED: REMARK    3  A    between atoms: C5_5  and  C6_6
+DOCKED: REMARK    4  A    between atoms: O3_10  and  C1_14
+DOCKED: REMARK    5  A    between atoms: C5_18  and  C6_19
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  MMA E   1      -4.523 -13.687  36.324 -0.28 -0.00    +0.000 C 
+DOCKED: ATOM      2  C2  MMA E   1      -4.356 -12.917  34.998 -0.25 -0.00    +0.000 C 
+DOCKED: ATOM      3  C3  MMA E   1      -3.073 -12.052  35.056 -0.21 -0.00    +0.000 C 
+DOCKED: ATOM      4  C4  MMA E   1      -3.118 -11.146  36.313 -0.35 -0.00    +0.000 C 
+DOCKED: ATOM      5  C5  MMA E   1      -3.443 -11.959  37.594 -0.50 -0.00    +0.000 C 
+DOCKED: ATOM      6  O2  MMA E   1      -5.512 -12.106  34.746 -0.30 -0.00    +0.000 OA
+DOCKED: ATOM      7  O4  MMA E   1      -1.863 -10.481  36.486 -0.71 -0.00    +0.000 OA
+DOCKED: ATOM      8  O5  MMA E   1      -4.635 -12.767  37.421 -0.46 -0.00    +0.000 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   5   6
+DOCKED: ATOM      9  C6  MMA E   1      -3.689 -11.074  38.810 -0.64 -0.00    +0.000 C 
+DOCKED: ATOM     10  O6  MMA E   1      -2.435 -10.558  39.307 -0.96 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   5   6
+DOCKED: BRANCH   1   8
+DOCKED: ATOM     11  C7  MMA E   1      -3.149 -15.389  35.492 -0.27 -0.00    +0.000 C 
+DOCKED: ATOM     12  O1  MMA E   1      -3.415 -14.510  36.551 -0.88 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   1   8
+DOCKED: BRANCH   3  10
+DOCKED: ATOM     13  O3  MMA E   1      -2.944 -11.265  33.858 -0.18 -0.00    +0.000 OA
+DOCKED: BRANCH  10  14
+DOCKED: ATOM     14  C1  MAN E   2      -1.613 -10.813  33.652 -0.19 -0.00    +0.000 C 
+DOCKED: ATOM     15  C2  MAN E   2      -1.446 -10.314  32.210 -0.25 -0.00    +0.000 C 
+DOCKED: ATOM     16  C3  MAN E   2      -1.560 -11.489  31.251 -0.40 -0.00    +0.000 C 
+DOCKED: ATOM     17  C4  MAN E   2      -0.549 -12.591  31.593 -0.34 -0.00    +0.000 C 
+DOCKED: ATOM     18  C5  MAN E   2      -0.649 -12.969  33.080 -0.22 -0.00    +0.000 C 
+DOCKED: ATOM     19  O2  MAN E   2      -0.191  -9.661  32.048 -0.21 -0.00    +0.000 OA
+DOCKED: ATOM     20  O3  MAN E   2      -1.365 -11.050  29.922 -0.63 -0.00    +0.000 OA
+DOCKED: ATOM     21  O4  MAN E   2      -0.824 -13.741  30.794 -0.37 -0.00    +0.000 OA
+DOCKED: ATOM     22  O5  MAN E   2      -0.608 -11.796  33.936 -0.22 -0.00    +0.000 OA
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     23  C6  MAN E   2       0.452 -13.921  33.545 -0.26 -0.00    +0.000 C 
+DOCKED: ATOM     24  O6  MAN E   2       1.007 -13.534  34.794 -0.38 -0.00    +0.000 OA
+DOCKED: ENDBRANCH  18  19
+DOCKED: ENDBRANCH  10  14
+DOCKED: ENDBRANCH   3  10
+DOCKED: TORSDOF 5
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 5 of 10
+Run: 5 Seed: 1195599081 2016976950 [ Run 5 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.703
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 6.452 9.829 32.586 quatxyzw -0.764315 -0.592809 -0.199260 0.157144 center 27.113 -27.737 10.004 ntor 5 -24.3485 -13.0023 140.0407 141.8211 46.6514
+State:	  6.452   9.829  32.586  -0.774 -0.600 -0.202 161.918    -24.35  -13.00  140.04  141.82   46.65
+
+DOCKED: MODEL        5
+DOCKED: USER    Run = 5
+DOCKED: USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -8.50 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =  590.74 nM (nanomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.99 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.99 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.71 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.71 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move mannose_part.pdbqt
+DOCKED: USER    NEWDPF about 27.112900 -27.737000 10.004000
+DOCKED: USER    NEWDPF tran0 6.452254 9.829387 32.586305
+DOCKED: USER    NEWDPF quaternion0 -0.764315 -0.592809 -0.199260 0.157144
+DOCKED: USER    NEWDPF axisangle0 -0.773931 -0.600267 -0.201767 161.917627
+DOCKED: USER    NEWDPF quat0 -0.773931 -0.600267 -0.201767 161.917627
+DOCKED: USER    NEWDPF dihe0 -24.35 -13.00 140.04 141.82 46.65 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  Name = E:\---WorkFiles\Computational Chemistry\Drug Discovery\Training\1QDO_08.05.21\mannose_part.pdb
+DOCKED: REMARK  5 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C1_1  and  O1_8
+DOCKED: REMARK    2  A    between atoms: C3_3  and  O3_10
+DOCKED: REMARK    3  A    between atoms: C5_5  and  C6_6
+DOCKED: REMARK    4  A    between atoms: O3_10  and  C1_14
+DOCKED: REMARK    5  A    between atoms: C5_18  and  C6_19
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  MMA E   1       5.634  12.251  30.835 -0.40 -0.00    +0.000 C 
+DOCKED: ATOM      2  C2  MMA E   1       6.623  11.338  31.589 -0.40 -0.00    +0.000 C 
+DOCKED: ATOM      3  C3  MMA E   1       5.887  10.612  32.741 -0.28 -0.00    +0.000 C 
+DOCKED: ATOM      4  C4  MMA E   1       5.179  11.657  33.641 -0.24 -0.00    +0.000 C 
+DOCKED: ATOM      5  C5  MMA E   1       4.320  12.643  32.807 -0.21 -0.00    +0.000 C 
+DOCKED: ATOM      6  O2  MMA E   1       7.727  12.107  32.087 -0.44 -0.00    +0.000 OA
+DOCKED: ATOM      7  O4  MMA E   1       4.342  10.998  34.596 -0.30 -0.00    +0.000 OA
+DOCKED: ATOM      8  O5  MMA E   1       5.089  13.235  31.728 -0.32 -0.00    +0.000 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   5   6
+DOCKED: ATOM      9  C6  MMA E   1       3.771  13.798  33.636 -0.26 -0.00    +0.000 C 
+DOCKED: ATOM     10  O6  MMA E   1       4.815  14.343  34.472 -0.69 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   5   6
+DOCKED: BRANCH   1   8
+DOCKED: ATOM     11  C7  MMA E   1       3.599  12.275  29.681 -0.30 -0.00    +0.000 C 
+DOCKED: ATOM     12  O1  MMA E   1       4.579  11.497  30.313 -0.94 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   1   8
+DOCKED: BRANCH   3  10
+DOCKED: ATOM     13  O3  MMA E   1       6.813   9.817  33.505 -0.37 -0.00    +0.000 OA
+DOCKED: BRANCH  10  14
+DOCKED: ATOM     14  C1  MAN E   2       7.142   8.599  32.852 -0.18 -0.00    +0.000 C 
+DOCKED: ATOM     15  C2  MAN E   2       5.953   8.120  32.006 -0.29 -0.00    +0.000 C 
+DOCKED: ATOM     16  C3  MAN E   2       4.808   7.718  32.923 -0.24 -0.00    +0.000 C 
+DOCKED: ATOM     17  C4  MAN E   2       5.249   6.656  33.937 -0.29 -0.00    +0.000 C 
+DOCKED: ATOM     18  C5  MAN E   2       6.523   7.108  34.669 -0.32 -0.00    +0.000 C 
+DOCKED: ATOM     19  O2  MAN E   2       6.335   7.025  31.180 -0.40 +0.00    +0.000 OA
+DOCKED: ATOM     20  O3  MAN E   2       3.722   7.235  32.158 -0.19 -0.00    +0.000 OA
+DOCKED: ATOM     21  O4  MAN E   2       4.204   6.457  34.889 -0.48 -0.00    +0.000 OA
+DOCKED: ATOM     22  O5  MAN E   2       7.550   7.548  33.739 -0.65 -0.00    +0.000 OA
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     23  C6  MAN E   2       7.136   6.026  35.558 -0.62 -0.00    +0.000 C 
+DOCKED: ATOM     24  O6  MAN E   2       8.112   6.549  36.449 -1.18 -0.00    +0.000 OA
+DOCKED: ENDBRANCH  18  19
+DOCKED: ENDBRANCH  10  14
+DOCKED: ENDBRANCH   3  10
+DOCKED: TORSDOF 5
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 6 of 10
+Run: 6 Seed: 854702679 2058531285 [ Run 6 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -12.873
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 6.018 7.301 32.416 quatxyzw -0.066607 0.799226 -0.176066 0.570790 center 27.113 -27.737 10.004 ntor 5 -91.2044 52.0391 92.2220 63.8774 -139.3666
+State:	  6.018   7.301  32.416  -0.081  0.973 -0.214 110.389    -91.20   52.04   92.22   63.88 -139.37
+
+DOCKED: MODEL        6
+DOCKED: USER    Run = 6
+DOCKED: USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -9.79 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   66.42 nM (nanomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -11.28 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  -11.28 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.59 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.59 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move mannose_part.pdbqt
+DOCKED: USER    NEWDPF about 27.112900 -27.737000 10.004000
+DOCKED: USER    NEWDPF tran0 6.018283 7.301496 32.415921
+DOCKED: USER    NEWDPF quaternion0 -0.066607 0.799226 -0.176066 0.570790
+DOCKED: USER    NEWDPF axisangle0 -0.081119 0.973365 -0.214428 110.389292
+DOCKED: USER    NEWDPF quat0 -0.081119 0.973365 -0.214428 110.389292
+DOCKED: USER    NEWDPF dihe0 -91.20 52.04 92.22 63.88 -139.37 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  Name = E:\---WorkFiles\Computational Chemistry\Drug Discovery\Training\1QDO_08.05.21\mannose_part.pdb
+DOCKED: REMARK  5 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C1_1  and  O1_8
+DOCKED: REMARK    2  A    between atoms: C3_3  and  O3_10
+DOCKED: REMARK    3  A    between atoms: C5_5  and  C6_6
+DOCKED: REMARK    4  A    between atoms: O3_10  and  C1_14
+DOCKED: REMARK    5  A    between atoms: C5_18  and  C6_19
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  MMA E   1       5.016   5.114  34.369 -0.32 -0.00    +0.000 C 
+DOCKED: ATOM      2  C2  MMA E   1       4.924   6.438  33.582 -0.28 -0.00    +0.000 C 
+DOCKED: ATOM      3  C3  MMA E   1       6.349   6.957  33.269 -0.35 -0.00    +0.000 C 
+DOCKED: ATOM      4  C4  MMA E   1       7.162   7.057  34.585 -0.49 -0.00    +0.000 C 
+DOCKED: ATOM      5  C5  MMA E   1       7.088   5.743  35.405 -0.57 -0.00    +0.000 C 
+DOCKED: ATOM      6  O2  MMA E   1       4.176   7.408  34.328 -0.81 -0.00    +0.000 OA
+DOCKED: ATOM      7  O4  MMA E   1       8.532   7.352  34.295 -0.39 -0.00    +0.000 OA
+DOCKED: ATOM      8  O5  MMA E   1       5.714   5.320  35.606 -0.52 -0.00    +0.000 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   5   6
+DOCKED: ATOM      9  C6  MMA E   1       7.709   5.874  36.791 -0.84 -0.00    +0.000 C 
+DOCKED: ATOM     10  O6  MMA E   1       8.627   6.989  36.816 -1.39 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   5   6
+DOCKED: BRANCH   1   8
+DOCKED: ATOM     11  C7  MMA E   1       4.938   3.025  33.319 -0.28 +0.00    +0.000 C 
+DOCKED: ATOM     12  O1  MMA E   1       5.709   4.155  33.625 -0.42 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   1   8
+DOCKED: BRANCH   3  10
+DOCKED: ATOM     13  O3  MMA E   1       6.284   8.233  32.605 -0.33 -0.00    +0.000 OA
+DOCKED: BRANCH  10  14
+DOCKED: ATOM     14  C1  MAN E   2       6.432   9.317  33.510 -0.35 -0.00    +0.000 C 
+DOCKED: ATOM     15  C2  MAN E   2       5.091  10.046  33.681 -0.26 -0.00    +0.000 C 
+DOCKED: ATOM     16  C3  MAN E   2       4.721  10.737  32.378 -0.21 -0.00    +0.000 C 
+DOCKED: ATOM     17  C4  MAN E   2       5.830  11.689  31.914 -0.32 -0.00    +0.000 C 
+DOCKED: ATOM     18  C5  MAN E   2       7.185  10.962  31.888 -0.41 -0.00    +0.000 C 
+DOCKED: ATOM     19  O2  MAN E   2       5.167  10.993  34.741 -0.34 -0.00    +0.000 OA
+DOCKED: ATOM     20  O3  MAN E   2       3.509  11.447  32.534 -0.19 -0.00    +0.000 OA
+DOCKED: ATOM     21  O4  MAN E   2       5.523  12.160  30.602 -0.86 -0.00    +0.000 OA
+DOCKED: ATOM     22  O5  MAN E   2       7.444  10.263  33.135 -0.40 -0.00    +0.000 OA
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     23  C6  MAN E   2       8.371  11.888  31.621 -0.39 -0.00    +0.000 C 
+DOCKED: ATOM     24  O6  MAN E   2       9.541  11.479  32.316 -0.57 -0.00    +0.000 OA
+DOCKED: ENDBRANCH  18  19
+DOCKED: ENDBRANCH  10  14
+DOCKED: ENDBRANCH   3  10
+DOCKED: TORSDOF 5
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 7 of 10
+Run: 7 Seed: 2026831822 1110452054 [ Run 7 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -12.577
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 6.036 -7.245 31.634 quatxyzw 0.653026 -0.146946 -0.738596 0.080246 center 27.113 -27.737 10.004 ntor 5 -70.4382 59.8033 -157.9944 79.2870 -127.4887
+State:	  6.036  -7.245  31.634   0.655 -0.147 -0.741 170.795    -70.44   59.80 -157.99   79.29 -127.49
+
+DOCKED: MODEL        7
+DOCKED: USER    Run = 7
+DOCKED: USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -9.45 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =  117.53 nM (nanomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.95 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  -10.95 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.63 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.63 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move mannose_part.pdbqt
+DOCKED: USER    NEWDPF about 27.112900 -27.737000 10.004000
+DOCKED: USER    NEWDPF tran0 6.036456 -7.244543 31.633897
+DOCKED: USER    NEWDPF quaternion0 0.653026 -0.146946 -0.738596 0.080246
+DOCKED: USER    NEWDPF axisangle0 0.655139 -0.147421 -0.740986 170.794569
+DOCKED: USER    NEWDPF quat0 0.655139 -0.147421 -0.740986 170.794569
+DOCKED: USER    NEWDPF dihe0 -70.44 59.80 -157.99 79.29 -127.49 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  Name = E:\---WorkFiles\Computational Chemistry\Drug Discovery\Training\1QDO_08.05.21\mannose_part.pdb
+DOCKED: REMARK  5 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C1_1  and  O1_8
+DOCKED: REMARK    2  A    between atoms: C3_3  and  O3_10
+DOCKED: REMARK    3  A    between atoms: C5_5  and  C6_6
+DOCKED: REMARK    4  A    between atoms: O3_10  and  C1_14
+DOCKED: REMARK    5  A    between atoms: C5_18  and  C6_19
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  MMA E   1       5.385  -5.024  29.573 -0.30 -0.00    +0.000 C 
+DOCKED: ATOM      2  C2  MMA E   1       5.179  -6.376  30.288 -0.29 -0.00    +0.000 C 
+DOCKED: ATOM      3  C3  MMA E   1       6.525  -6.863  30.878 -0.33 +0.00    +0.000 C 
+DOCKED: ATOM      4  C4  MMA E   1       7.597  -6.896  29.759 -0.50 -0.00    +0.000 C 
+DOCKED: ATOM      5  C5  MMA E   1       7.648  -5.558  28.975 -0.60 -0.00    +0.000 C 
+DOCKED: ATOM      6  O2  MMA E   1       4.636  -7.342  29.377 -0.69 -0.00    +0.000 OA
+DOCKED: ATOM      7  O4  MMA E   1       8.886  -7.160  30.320 -0.56 -0.00    +0.000 OA
+DOCKED: ATOM      8  O5  MMA E   1       6.332  -5.168  28.504 -0.51 -0.00    +0.000 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   5   6
+DOCKED: ATOM      9  C6  MMA E   1       8.548  -5.625  27.747 -0.74 -0.00    +0.000 C 
+DOCKED: ATOM     10  O6  MMA E   1       9.135  -6.940  27.638 -1.31 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   5   6
+DOCKED: BRANCH   1   8
+DOCKED: ATOM     11  C7  MMA E   1       4.947  -3.062  30.770 -0.28 +0.00    +0.000 C 
+DOCKED: ATOM     12  O1  MMA E   1       5.874  -4.070  30.470 -0.47 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   1   8
+DOCKED: BRANCH   3  10
+DOCKED: ATOM     13  O3  MMA E   1       6.368  -8.161  31.480 -0.35 +0.00    +0.000 OA
+DOCKED: BRANCH  10  14
+DOCKED: ATOM     14  C1  MAN E   2       6.984  -9.186  30.713 -0.36 -0.00    +0.000 C 
+DOCKED: ATOM     15  C2  MAN E   2       5.961  -9.812  29.755 -0.31 -0.00    +0.000 C 
+DOCKED: ATOM     16  C3  MAN E   2       4.913 -10.569  30.558 -0.23 -0.00    +0.000 C 
+DOCKED: ATOM     17  C4  MAN E   2       5.557 -11.621  31.469 -0.24 -0.00    +0.000 C 
+DOCKED: ATOM     18  C5  MAN E   2       6.674 -10.987  32.316 -0.36 -0.00    +0.000 C 
+DOCKED: ATOM     19  O2  MAN E   2       6.606 -10.685  28.834 -0.45 -0.00    +0.000 OA
+DOCKED: ATOM     20  O3  MAN E   2       3.988 -11.186  29.686 -0.32 -0.00    +0.000 OA
+DOCKED: ATOM     21  O4  MAN E   2       4.560 -12.163  32.334 -0.25 -0.00    +0.000 OA
+DOCKED: ATOM     22  O5  MAN E   2       7.598 -10.219  31.497 -0.39 -0.00    +0.000 OA
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     23  C6  MAN E   2       7.493 -12.004  33.109 -0.47 -0.00    +0.000 C 
+DOCKED: ATOM     24  O6  MAN E   2       7.157 -12.006  34.490 -0.63 -0.00    +0.000 OA
+DOCKED: ENDBRANCH  18  19
+DOCKED: ENDBRANCH  10  14
+DOCKED: ENDBRANCH   3  10
+DOCKED: TORSDOF 5
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 8 of 10
+Run: 8 Seed: 1549733150 602498872 [ Run 8 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -12.808
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 26.967 -24.719 9.302 quatxyzw -0.348502 0.774975 -0.484097 -0.208830 center 27.113 -27.737 10.004 ntor 5 -17.1205 114.8150 179.4331 77.4524 -118.2958
+State:	 26.967 -24.719   9.302  -0.356  0.792 -0.495 -155.892    -17.12  114.82  179.43   77.45 -118.30
+
+DOCKED: MODEL        8
+DOCKED: USER    Run = 8
+DOCKED: USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -9.69 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   79.49 nM (nanomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -11.18 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  -11.18 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.63 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.63 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move mannose_part.pdbqt
+DOCKED: USER    NEWDPF about 27.112900 -27.737000 10.004000
+DOCKED: USER    NEWDPF tran0 26.967301 -24.719175 9.301548
+DOCKED: USER    NEWDPF quaternion0 -0.348502 0.774975 -0.484097 -0.208830
+DOCKED: USER    NEWDPF axisangle0 -0.356359 0.792447 -0.495011 -155.892444
+DOCKED: USER    NEWDPF quat0 -0.356359 0.792447 -0.495011 -155.892444
+DOCKED: USER    NEWDPF dihe0 -17.12 114.82 179.43 77.45 -118.30 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  Name = E:\---WorkFiles\Computational Chemistry\Drug Discovery\Training\1QDO_08.05.21\mannose_part.pdb
+DOCKED: REMARK  5 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C1_1  and  O1_8
+DOCKED: REMARK    2  A    between atoms: C3_3  and  O3_10
+DOCKED: REMARK    3  A    between atoms: C5_5  and  C6_6
+DOCKED: REMARK    4  A    between atoms: O3_10  and  C1_14
+DOCKED: REMARK    5  A    between atoms: C5_18  and  C6_19
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  MMA E   1      27.108 -27.462  10.738 -0.30 -0.00    +0.000 C 
+DOCKED: ATOM      2  C2  MMA E   1      26.906 -26.520   9.532 -0.19 -0.00    +0.000 C 
+DOCKED: ATOM      3  C3  MMA E   1      26.457 -25.125  10.030 -0.33 -0.00    +0.000 C 
+DOCKED: ATOM      4  C4  MMA E   1      25.204 -25.278  10.930 -0.53 -0.00    +0.000 C 
+DOCKED: ATOM      5  C5  MMA E   1      25.417 -26.351  12.030 -0.59 -0.00    +0.000 C 
+DOCKED: ATOM      6  O2  MMA E   1      25.946 -27.077   8.623 -0.25 -0.00    +0.000 OA
+DOCKED: ATOM      7  O4  MMA E   1      24.888 -24.028  11.550 -0.69 -0.00    +0.000 OA
+DOCKED: ATOM      8  O5  MMA E   1      25.879 -27.605  11.465 -0.49 -0.00    +0.000 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   5   6
+DOCKED: ATOM      9  C6  MMA E   1      24.143 -26.665  12.805 -0.76 -0.00    +0.000 C 
+DOCKED: ATOM     10  O6  MMA E   1      23.080 -27.004  11.887 -1.42 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   5   6
+DOCKED: BRANCH   1   8
+DOCKED: ATOM     11  C7  MMA E   1      29.302 -26.683  10.976 -0.21 -0.00    +0.000 C 
+DOCKED: ATOM     12  O1  MMA E   1      28.075 -26.941  11.603 -0.35 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   1   8
+DOCKED: BRANCH   3  10
+DOCKED: ATOM     13  O3  MMA E   1      26.186 -24.258   8.913 -0.35 -0.00    +0.000 OA
+DOCKED: BRANCH  10  14
+DOCKED: ATOM     14  C1  MAN E   2      24.827 -23.849   8.868 -0.34 -0.00    +0.000 C 
+DOCKED: ATOM     15  C2  MAN E   2      24.032 -24.771   7.933 -0.34 -0.00    +0.000 C 
+DOCKED: ATOM     16  C3  MAN E   2      24.499 -24.563   6.500 -0.18 -0.00    +0.000 C 
+DOCKED: ATOM     17  C4  MAN E   2      24.384 -23.093   6.081 -0.27 -0.00    +0.000 C 
+DOCKED: ATOM     18  C5  MAN E   2      25.072 -22.185   7.114 -0.42 -0.00    +0.000 C 
+DOCKED: ATOM     19  O2  MAN E   2      22.636 -24.513   8.042 -0.45 -0.00    +0.000 OA
+DOCKED: ATOM     20  O3  MAN E   2      23.746 -25.376   5.623 -0.15 -0.00    +0.000 OA
+DOCKED: ATOM     21  O4  MAN E   2      25.010 -22.919   4.810 -0.13 -0.00    +0.000 OA
+DOCKED: ATOM     22  O5  MAN E   2      24.636 -22.484   8.467 -0.82 -0.00    +0.000 OA
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     23  C6  MAN E   2      24.838 -20.694   6.871 -0.57 -0.00    +0.000 C 
+DOCKED: ATOM     24  O6  MAN E   2      26.053 -19.959   6.816 -1.03 +0.00    +0.000 OA
+DOCKED: ENDBRANCH  18  19
+DOCKED: ENDBRANCH  10  14
+DOCKED: ENDBRANCH   3  10
+DOCKED: TORSDOF 5
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 9 of 10
+Run: 9 Seed: 405166831 1880758269 [ Run 9 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -10.980
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -3.094 -11.157 34.800 quatxyzw 0.642920 0.429569 0.158634 -0.613970 center 27.113 -27.737 10.004 ntor 5 -160.5169 116.8946 179.9700 -65.6223 -22.3241
+State:	 -3.094 -11.157  34.800   0.815  0.544  0.201 -104.246   -160.52  116.89  179.97  -65.62  -22.32
+
+DOCKED: MODEL        9
+DOCKED: USER    Run = 9
+DOCKED: USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -7.82 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    1.86 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.67 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.67 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move mannose_part.pdbqt
+DOCKED: USER    NEWDPF about 27.112900 -27.737000 10.004000
+DOCKED: USER    NEWDPF tran0 -3.093613 -11.157256 34.800463
+DOCKED: USER    NEWDPF quaternion0 0.642920 0.429569 0.158634 -0.613970
+DOCKED: USER    NEWDPF axisangle0 0.814514 0.544221 0.200973 -104.245716
+DOCKED: USER    NEWDPF quat0 0.814514 0.544221 0.200973 -104.245716
+DOCKED: USER    NEWDPF dihe0 -160.52 116.89 179.97 -65.62 -22.32 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  Name = E:\---WorkFiles\Computational Chemistry\Drug Discovery\Training\1QDO_08.05.21\mannose_part.pdb
+DOCKED: REMARK  5 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C1_1  and  O1_8
+DOCKED: REMARK    2  A    between atoms: C3_3  and  O3_10
+DOCKED: REMARK    3  A    between atoms: C5_5  and  C6_6
+DOCKED: REMARK    4  A    between atoms: O3_10  and  C1_14
+DOCKED: REMARK    5  A    between atoms: C5_18  and  C6_19
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  MMA E   1      -1.900 -10.681  31.981 -0.30 -0.00    +0.000 C 
+DOCKED: ATOM      2  C2  MMA E   1      -1.851 -10.831  33.516 -0.19 -0.00    +0.000 C 
+DOCKED: ATOM      3  C3  MMA E   1      -3.231 -10.472  34.118 -0.19 -0.00    +0.000 C 
+DOCKED: ATOM      4  C4  MMA E   1      -3.655  -9.061  33.633 -0.22 -0.00    +0.000 C 
+DOCKED: ATOM      5  C5  MMA E   1      -3.535  -8.926  32.092 -0.20 -0.00    +0.000 C 
+DOCKED: ATOM      6  O2  MMA E   1      -0.818  -9.999  34.063 -0.21 -0.00    +0.000 OA
+DOCKED: ATOM      7  O4  MMA E   1      -5.004  -8.791  34.023 -0.28 -0.00    +0.000 OA
+DOCKED: ATOM      8  O5  MMA E   1      -2.221  -9.328  31.625 -0.31 -0.00    +0.000 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   5   6
+DOCKED: ATOM      9  C6  MMA E   1      -3.753  -7.499  31.604 -0.27 -0.00    +0.000 C 
+DOCKED: ATOM     10  O6  MMA E   1      -5.151  -7.286  31.311 -0.92 +0.00    +0.000 OA
+DOCKED: ENDBRANCH   5   6
+DOCKED: BRANCH   1   8
+DOCKED: ATOM     11  C7  MMA E   1      -2.736 -12.861  31.832 -0.30 -0.00    +0.000 C 
+DOCKED: ATOM     12  O1  MMA E   1      -2.878 -11.522  31.442 -0.95 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   1   8
+DOCKED: BRANCH   3  10
+DOCKED: ATOM     13  O3  MMA E   1      -3.181 -10.528  35.555 -0.27 -0.00    +0.000 OA
+DOCKED: BRANCH  10  14
+DOCKED: ATOM     14  C1  MAN E   2      -4.414 -10.952  36.120 -0.33 -0.00    +0.000 C 
+DOCKED: ATOM     15  C2  MAN E   2      -4.196 -12.215  36.966 -0.42 -0.00    +0.000 C 
+DOCKED: ATOM     16  C3  MAN E   2      -3.820 -13.375  36.056 -0.29 -0.00    +0.000 C 
+DOCKED: ATOM     17  C4  MAN E   2      -4.874 -13.596  34.965 -0.29 -0.00    +0.000 C 
+DOCKED: ATOM     18  C5  MAN E   2      -5.169 -12.278  34.229 -0.29 -0.00    +0.000 C 
+DOCKED: ATOM     19  O2  MAN E   2      -5.369 -12.528  37.709 -0.63 -0.00    +0.000 OA
+DOCKED: ATOM     20  O3  MAN E   2      -3.658 -14.554  36.817 -0.91 -0.00    +0.000 OA
+DOCKED: ATOM     21  O4  MAN E   2      -4.385 -14.558  34.030 -0.30 -0.00    +0.000 OA
+DOCKED: ATOM     22  O5  MAN E   2      -5.449 -11.196  35.157 -0.29 -0.00    +0.000 OA
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     23  C6  MAN E   2      -6.345 -12.370  33.256 -0.40 -0.00    +0.000 C 
+DOCKED: ATOM     24  O6  MAN E   2      -5.998 -11.936  31.949 -0.56 -0.00    +0.000 OA
+DOCKED: ENDBRANCH  18  19
+DOCKED: ENDBRANCH  10  14
+DOCKED: ENDBRANCH   3  10
+DOCKED: TORSDOF 5
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 10 of 10
+Run: 10 Seed: 1630277016 161973359 [ Run 10 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -12.242
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -2.377 12.825 29.723 quatxyzw 0.771770 0.232451 -0.488133 -0.334758 center 27.113 -27.737 10.004 ntor 5 75.7149 89.0966 49.9039 -28.9964 11.4625
+State:	 -2.377  12.825  29.723   0.819  0.247 -0.518 -140.884     75.71   89.10   49.90  -29.00   11.46
+
+DOCKED: MODEL       10
+DOCKED: USER    Run = 10
+DOCKED: USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -8.86 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =  318.00 nM (nanomolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.36 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  -10.36 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.89 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.89 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move mannose_part.pdbqt
+DOCKED: USER    NEWDPF about 27.112900 -27.737000 10.004000
+DOCKED: USER    NEWDPF tran0 -2.376798 12.825312 29.723328
+DOCKED: USER    NEWDPF quaternion0 0.771770 0.232451 -0.488133 -0.334758
+DOCKED: USER    NEWDPF axisangle0 0.819025 0.246683 -0.518021 -140.884339
+DOCKED: USER    NEWDPF quat0 0.819025 0.246683 -0.518021 -140.884339
+DOCKED: USER    NEWDPF dihe0 75.71 89.10 49.90 -29.00 11.46 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  Name = E:\---WorkFiles\Computational Chemistry\Drug Discovery\Training\1QDO_08.05.21\mannose_part.pdb
+DOCKED: REMARK  5 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: C1_1  and  O1_8
+DOCKED: REMARK    2  A    between atoms: C3_3  and  O3_10
+DOCKED: REMARK    3  A    between atoms: C5_5  and  C6_6
+DOCKED: REMARK    4  A    between atoms: O3_10  and  C1_14
+DOCKED: REMARK    5  A    between atoms: C5_18  and  C6_19
+DOCKED: REMARK                            x       y       z     vdW  Elec       q    Type
+DOCKED: REMARK                         _______ _______ _______ _____ _____    ______ ____
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C1  MMA E   1      -3.685  13.479  26.991 -0.31 -0.00    +0.000 C 
+DOCKED: ATOM      2  C2  MMA E   1      -2.853  12.636  27.980 -0.25 -0.00    +0.000 C 
+DOCKED: ATOM      3  C3  MMA E   1      -2.267  13.553  29.081 -0.24 -0.00    +0.000 C 
+DOCKED: ATOM      4  C4  MMA E   1      -1.480  14.714  28.420 -0.27 -0.00    +0.000 C 
+DOCKED: ATOM      5  C5  MMA E   1      -2.319  15.425  27.325 -0.31 -0.00    +0.000 C 
+DOCKED: ATOM      6  O2  MMA E   1      -1.811  11.938  27.283 -0.66 -0.00    +0.000 OA
+DOCKED: ATOM      7  O4  MMA E   1      -1.093  15.673  29.409 -0.29 -0.00    +0.000 OA
+DOCKED: ATOM      8  O5  MMA E   1      -2.858  14.475  26.370 -0.92 -0.00    +0.000 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   5   6
+DOCKED: ATOM      9  C6  MMA E   1      -1.510  16.437  26.523 -0.32 -0.00    +0.000 C 
+DOCKED: ATOM     10  O6  MMA E   1      -1.971  16.461  25.154 -0.45 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   5   6
+DOCKED: BRANCH   1   8
+DOCKED: ATOM     11  C7  MMA E   1      -5.842  13.306  27.882 -0.42 -0.00    +0.000 C 
+DOCKED: ATOM     12  O1  MMA E   1      -4.726  14.126  27.662 -0.39 -0.00    +0.000 OA
+DOCKED: ENDBRANCH   1   8
+DOCKED: BRANCH   3  10
+DOCKED: ATOM     13  O3  MMA E   1      -1.421  12.797  29.967 -0.22 -0.00    +0.000 OA
+DOCKED: BRANCH  10  14
+DOCKED: ATOM     14  C1  MAN E   2      -1.962  12.703  31.277 -0.35 -0.00    +0.000 C 
+DOCKED: ATOM     15  C2  MAN E   2      -1.356  11.497  32.009 -0.38 -0.00    +0.000 C 
+DOCKED: ATOM     16  C3  MAN E   2      -1.834  10.212  31.350 -0.29 -0.00    +0.000 C 
+DOCKED: ATOM     17  C4  MAN E   2      -3.366  10.141  31.306 -0.22 -0.00    +0.000 C 
+DOCKED: ATOM     18  C5  MAN E   2      -3.945  11.427  30.692 -0.38 -0.00    +0.000 C 
+DOCKED: ATOM     19  O2  MAN E   2      -1.720  11.513  33.386 -0.69 -0.00    +0.000 OA
+DOCKED: ATOM     20  O3  MAN E   2      -1.319   9.093  32.041 -0.29 -0.00    +0.000 OA
+DOCKED: ATOM     21  O4  MAN E   2      -3.759   9.022  30.513 -0.28 -0.00    +0.000 OA
+DOCKED: ATOM     22  O5  MAN E   2      -3.393  12.617  31.318 -0.88 -0.00    +0.000 OA
+DOCKED: BRANCH  18  19
+DOCKED: ATOM     23  C6  MAN E   2      -5.468  11.518  30.787 -0.38 -0.00    +0.000 C 
+DOCKED: ATOM     24  O6  MAN E   2      -5.892  12.409  31.809 -1.16 -0.00    +0.000 OA
+DOCKED: ENDBRANCH  18  19
+DOCKED: ENDBRANCH  10  14
+DOCKED: ENDBRANCH   3  10
+DOCKED: TORSDOF 5
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+DPF> analysis                             # perform a ranked cluster analysis
+
+
+		CLUSTER ANALYSIS OF CONFORMATIONS
+		_________________________________
+
+Number of conformations = 10
+
+RMSD cluster analysis will be performed using the ligand atoms only (24 / 24 total atoms).
+
+Outputting structurally similar clusters, ranked in order of increasing energy.
+
+
+________________________________________________________________________________
+
+Number of distinct conformational clusters found = 8,  out of 10 runs,
+Using an rmsd-tolerance of 2.0 A
+
+
+	CLUSTERING HISTOGRAM
+	____________________
+
+________________________________________________________________________________
+     |           |     |           |     |                                    
+Clus | Lowest    | Run | Mean      | Num | Histogram                          
+-ter | Binding   |     | Binding   | in  |                                    
+Rank | Energy    |     | Energy    | Clus|    5    10   15   20   25   30   35
+_____|___________|_____|___________|_____|____:____|____:____|____:____|____:___
+   1 |     -9.79 |   6 |     -9.14 |   2 |##
+   2 |     -9.78 |   1 |     -9.78 |   1 |#
+   3 |     -9.69 |   8 |     -9.69 |   1 |#
+   4 |     -9.45 |   7 |     -9.25 |   2 |##
+   5 |     -8.86 |  10 |     -8.86 |   1 |#
+   6 |     -8.63 |   2 |     -8.63 |   1 |#
+   7 |     -7.98 |   4 |     -7.98 |   1 |#
+   8 |     -7.82 |   9 |     -7.82 |   1 |#
+_____|___________|_____|___________|_____|______________________________________
+
+
+Number of multi-member conformational clusters found = 2, out of 10 runs.
+
+	RMSD TABLE
+	__________
+
+_____________________________________________________________________
+     |      |      |           |         |                 |
+Rank | Sub- | Run  | Binding   | Cluster | Reference       | Grep
+     | Rank |      | Energy    | RMSD    | RMSD            | Pattern
+_____|______|______|___________|_________|_________________|___________
+   1      1      6       -9.79      0.00     44.05           RANKING
+   1      2      5       -8.50      1.73     45.13           RANKING
+   2      1      1       -9.78      0.00     48.90           RANKING
+   3      1      8       -9.69      0.00      2.40           RANKING
+   4      1      7       -9.45      0.00     31.28           RANKING
+   4      2      3       -9.05      1.73     30.89           RANKING
+   5      1     10       -8.86      0.00     50.11           RANKING
+   6      1      2       -8.63      0.00     36.31           RANKING
+   7      1      4       -7.98      0.00     37.43           RANKING
+   8      1      9       -7.82      0.00     38.62           RANKING
+_______________________________________________________________________
+
+
+
+	INFORMATION ENTROPY ANALYSIS FOR THIS CLUSTERING
+	________________________________________________
+
+
+Information entropy for this clustering = 0.88  (rmstol = 2.00 Angstrom)
+
+_______________________________________________________________________
+
+
+	STATISTICAL MECHANICAL ANALYSIS
+	_______________________________
+
+
+Partition function, Q =    10.15            at Temperature, T = 298.15 K
+Free energy,        A ~ -1373.19 kcal/mol   at Temperature, T = 298.15 K
+Internal energy,    U =    -8.96 kcal/mol   at Temperature, T = 298.15 K
+Entropy,            S =     4.58 kcal/mol/K at Temperature, T = 298.15 K
+
+_______________________________________________________________________
+
+
+	LOWEST ENERGY DOCKED CONFORMATION from EACH CLUSTER
+	___________________________________________________
+
+
+
+Keeping original residue number (specified in the input PDBQ file) for outputting.
+
+MODEL        6
+USER    Run = 6
+USER    Cluster Rank = 1
+USER    Number of conformations in this cluster = 2
+USER  
+USER    RMSD from reference structure       = 44.051 A
+USER  
+USER    Estimated Free Energy of Binding    =   -9.79 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =   66.42 nM (nanomolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =  -11.28 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  -11.28 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   -1.59 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -1.59 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+USER    NEWDPF move	mannose_part.pdbqt
+USER    NEWDPF about	27.112900 -27.737000 10.004000
+USER    NEWDPF tran0	6.018283 7.301496 32.415921
+USER    NEWDPF axisangle0	-0.081119 0.973365 -0.214428 110.389292
+USER    NEWDPF quaternion0	-0.066607 0.799226 -0.176066 0.570790
+USER    NEWDPF dihe0	-91.20 52.04 92.22 63.88 -139.37 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C1  MMA E   1       5.016   5.114  34.369 -0.32 -0.00    +0.000    44.051
+ATOM      2  C2  MMA E   1       4.924   6.438  33.582 -0.28 -0.00    +0.000    44.051
+ATOM      3  C3  MMA E   1       6.349   6.957  33.269 -0.35 -0.00    +0.000    44.051
+ATOM      4  C4  MMA E   1       7.162   7.057  34.585 -0.49 -0.00    +0.000    44.051
+ATOM      5  C5  MMA E   1       7.088   5.743  35.405 -0.57 -0.00    +0.000    44.051
+ATOM      6  O2  MMA E   1       4.176   7.408  34.328 -0.81 -0.00    +0.000    44.051
+ATOM      7  O4  MMA E   1       8.532   7.352  34.295 -0.39 -0.00    +0.000    44.051
+ATOM      8  O5  MMA E   1       5.714   5.320  35.606 -0.52 -0.00    +0.000    44.051
+ATOM      9  C6  MMA E   1       7.709   5.874  36.791 -0.84 -0.00    +0.000    44.051
+ATOM     10  O6  MMA E   1       8.627   6.989  36.816 -1.39 -0.00    +0.000    44.051
+ATOM     11  C7  MMA E   1       4.938   3.025  33.319 -0.28 +0.00    +0.000    44.051
+ATOM     12  O1  MMA E   1       5.709   4.155  33.625 -0.42 -0.00    +0.000    44.051
+ATOM     13  O3  MMA E   1       6.284   8.233  32.605 -0.33 -0.00    +0.000    44.051
+ATOM     14  C1  MAN E   2       6.432   9.317  33.510 -0.35 -0.00    +0.000    44.051
+ATOM     15  C2  MAN E   2       5.091  10.046  33.681 -0.26 -0.00    +0.000    44.051
+ATOM     16  C3  MAN E   2       4.721  10.737  32.378 -0.21 -0.00    +0.000    44.051
+ATOM     17  C4  MAN E   2       5.830  11.689  31.914 -0.32 -0.00    +0.000    44.051
+ATOM     18  C5  MAN E   2       7.185  10.962  31.888 -0.41 -0.00    +0.000    44.051
+ATOM     19  O2  MAN E   2       5.167  10.993  34.741 -0.34 -0.00    +0.000    44.051
+ATOM     20  O3  MAN E   2       3.509  11.447  32.534 -0.19 -0.00    +0.000    44.051
+ATOM     21  O4  MAN E   2       5.523  12.160  30.602 -0.86 -0.00    +0.000    44.051
+ATOM     22  O5  MAN E   2       7.444  10.263  33.135 -0.40 -0.00    +0.000    44.051
+ATOM     23  C6  MAN E   2       8.371  11.888  31.621 -0.39 -0.00    +0.000    44.051
+ATOM     24  O6  MAN E   2       9.541  11.479  32.316 -0.57 -0.00    +0.000    44.051
+TER
+ENDMDL
+MODEL        1
+USER    Run = 1
+USER    Cluster Rank = 2
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 48.897 A
+USER  
+USER    Estimated Free Energy of Binding    =   -9.78 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =   67.33 nM (nanomolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =  -11.28 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  -11.28 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.99 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.99 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+USER    NEWDPF move	mannose_part.pdbqt
+USER    NEWDPF about	27.112900 -27.737000 10.004000
+USER    NEWDPF tran0	-3.185325 12.042074 28.541583
+USER    NEWDPF axisangle0	0.290427 0.535606 0.792955 97.895937
+USER    NEWDPF quaternion0	0.219015 0.403908 0.597978 0.656744
+USER    NEWDPF dihe0	175.21 83.42 -141.78 -179.83 21.39 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C1  MMA E   1      -5.611  11.306  30.324 -0.46 -0.00    +0.000    48.897
+ATOM      2  C2  MMA E   1      -4.175  11.798  30.045 -0.35 -0.00    +0.000    48.897
+ATOM      3  C3  MMA E   1      -3.675  11.212  28.703 -0.22 -0.00    +0.000    48.897
+ATOM      4  C4  MMA E   1      -3.821   9.669  28.728 -0.24 -0.00    +0.000    48.897
+ATOM      5  C5  MMA E   1      -5.245   9.235  29.165 -0.33 -0.00    +0.000    48.897
+ATOM      6  O2  MMA E   1      -3.306  11.429  31.125 -0.75 -0.00    +0.000    48.897
+ATOM      7  O4  MMA E   1      -3.544   9.127  27.433 -0.35 -0.00    +0.000    48.897
+ATOM      8  O5  MMA E   1      -5.636   9.873  30.409 -0.25 -0.00    +0.000    48.897
+ATOM      9  C6  MMA E   1      -5.364   7.733  29.390 -0.27 +0.00    +0.000    48.897
+ATOM     10  O6  MMA E   1      -6.266   7.159  28.419 -0.79 +0.00    +0.000    48.897
+ATOM     11  C7  MMA E   1      -7.012  12.980  29.482 -0.52 -0.00    +0.000    48.897
+ATOM     12  O1  MMA E   1      -6.469  11.702  29.294 -0.48 -0.00    +0.000    48.897
+ATOM     13  O3  MMA E   1      -2.308  11.596  28.466 -0.25 -0.00    +0.000    48.897
+ATOM     14  C1  MAN E   2      -2.202  12.640  27.509 -0.29 -0.00    +0.000    48.897
+ATOM     15  C2  MAN E   2      -3.598  13.172  27.155 -0.31 -0.00    +0.000    48.897
+ATOM     16  C3  MAN E   2      -4.373  12.099  26.405 -0.43 -0.00    +0.000    48.897
+ATOM     17  C4  MAN E   2      -3.612  11.625  25.160 -0.46 -0.00    +0.000    48.897
+ATOM     18  C5  MAN E   2      -2.172  11.231  25.529 -0.58 -0.00    +0.000    48.897
+ATOM     19  O2  MAN E   2      -3.499  14.354  26.367 -0.87 -0.00    +0.000    48.897
+ATOM     20  O3  MAN E   2      -5.645  12.590  26.035 -0.36 -0.00    +0.000    48.897
+ATOM     21  O4  MAN E   2      -4.282  10.494  24.606 -0.75 -0.00    +0.000    48.897
+ATOM     22  O5  MAN E   2      -1.514  12.269  26.306 -0.48 -0.00    +0.000    48.897
+ATOM     23  C6  MAN E   2      -1.290  10.930  24.318 -0.61 -0.00    +0.000    48.897
+ATOM     24  O6  MAN E   2      -1.370   9.569  23.918 -0.87 -0.00    +0.000    48.897
+TER
+ENDMDL
+MODEL        8
+USER    Run = 8
+USER    Cluster Rank = 3
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 2.396 A
+USER  
+USER    Estimated Free Energy of Binding    =   -9.69 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =   79.49 nM (nanomolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =  -11.18 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  -11.18 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   -1.63 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -1.63 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+USER    NEWDPF move	mannose_part.pdbqt
+USER    NEWDPF about	27.112900 -27.737000 10.004000
+USER    NEWDPF tran0	26.967301 -24.719175 9.301548
+USER    NEWDPF axisangle0	-0.356359 0.792447 -0.495011 -155.892444
+USER    NEWDPF quaternion0	-0.348502 0.774975 -0.484097 -0.208830
+USER    NEWDPF dihe0	-17.12 114.82 179.43 77.45 -118.30 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C1  MMA E   1      27.108 -27.462  10.738 -0.30 -0.00    +0.000     2.396
+ATOM      2  C2  MMA E   1      26.906 -26.520   9.532 -0.19 -0.00    +0.000     2.396
+ATOM      3  C3  MMA E   1      26.457 -25.125  10.030 -0.33 -0.00    +0.000     2.396
+ATOM      4  C4  MMA E   1      25.204 -25.278  10.930 -0.53 -0.00    +0.000     2.396
+ATOM      5  C5  MMA E   1      25.417 -26.351  12.030 -0.59 -0.00    +0.000     2.396
+ATOM      6  O2  MMA E   1      25.946 -27.077   8.623 -0.25 -0.00    +0.000     2.396
+ATOM      7  O4  MMA E   1      24.888 -24.028  11.550 -0.69 -0.00    +0.000     2.396
+ATOM      8  O5  MMA E   1      25.879 -27.605  11.465 -0.49 -0.00    +0.000     2.396
+ATOM      9  C6  MMA E   1      24.143 -26.665  12.805 -0.76 -0.00    +0.000     2.396
+ATOM     10  O6  MMA E   1      23.080 -27.004  11.887 -1.42 -0.00    +0.000     2.396
+ATOM     11  C7  MMA E   1      29.302 -26.683  10.976 -0.21 -0.00    +0.000     2.396
+ATOM     12  O1  MMA E   1      28.075 -26.941  11.603 -0.35 -0.00    +0.000     2.396
+ATOM     13  O3  MMA E   1      26.186 -24.258   8.913 -0.35 -0.00    +0.000     2.396
+ATOM     14  C1  MAN E   2      24.827 -23.849   8.868 -0.34 -0.00    +0.000     2.396
+ATOM     15  C2  MAN E   2      24.032 -24.771   7.933 -0.34 -0.00    +0.000     2.396
+ATOM     16  C3  MAN E   2      24.499 -24.563   6.500 -0.18 -0.00    +0.000     2.396
+ATOM     17  C4  MAN E   2      24.384 -23.093   6.081 -0.27 -0.00    +0.000     2.396
+ATOM     18  C5  MAN E   2      25.072 -22.185   7.114 -0.42 -0.00    +0.000     2.396
+ATOM     19  O2  MAN E   2      22.636 -24.513   8.042 -0.45 -0.00    +0.000     2.396
+ATOM     20  O3  MAN E   2      23.746 -25.376   5.623 -0.15 -0.00    +0.000     2.396
+ATOM     21  O4  MAN E   2      25.010 -22.919   4.810 -0.13 -0.00    +0.000     2.396
+ATOM     22  O5  MAN E   2      24.636 -22.484   8.467 -0.82 -0.00    +0.000     2.396
+ATOM     23  C6  MAN E   2      24.838 -20.694   6.871 -0.57 -0.00    +0.000     2.396
+ATOM     24  O6  MAN E   2      26.053 -19.959   6.816 -1.03 +0.00    +0.000     2.396
+TER
+ENDMDL
+MODEL        7
+USER    Run = 7
+USER    Cluster Rank = 4
+USER    Number of conformations in this cluster = 2
+USER  
+USER    RMSD from reference structure       = 31.276 A
+USER  
+USER    Estimated Free Energy of Binding    =   -9.45 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =  117.53 nM (nanomolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =  -10.95 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  -10.95 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   -1.63 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -1.63 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+USER    NEWDPF move	mannose_part.pdbqt
+USER    NEWDPF about	27.112900 -27.737000 10.004000
+USER    NEWDPF tran0	6.036456 -7.244543 31.633897
+USER    NEWDPF axisangle0	0.655139 -0.147421 -0.740986 170.794569
+USER    NEWDPF quaternion0	0.653026 -0.146946 -0.738596 0.080246
+USER    NEWDPF dihe0	-70.44 59.80 -157.99 79.29 -127.49 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C1  MMA E   1       5.385  -5.024  29.573 -0.30 -0.00    +0.000    31.276
+ATOM      2  C2  MMA E   1       5.179  -6.376  30.288 -0.29 -0.00    +0.000    31.276
+ATOM      3  C3  MMA E   1       6.525  -6.863  30.878 -0.33 +0.00    +0.000    31.276
+ATOM      4  C4  MMA E   1       7.597  -6.896  29.759 -0.50 -0.00    +0.000    31.276
+ATOM      5  C5  MMA E   1       7.648  -5.558  28.975 -0.60 -0.00    +0.000    31.276
+ATOM      6  O2  MMA E   1       4.636  -7.342  29.377 -0.69 -0.00    +0.000    31.276
+ATOM      7  O4  MMA E   1       8.886  -7.160  30.320 -0.56 -0.00    +0.000    31.276
+ATOM      8  O5  MMA E   1       6.332  -5.168  28.504 -0.51 -0.00    +0.000    31.276
+ATOM      9  C6  MMA E   1       8.548  -5.625  27.747 -0.74 -0.00    +0.000    31.276
+ATOM     10  O6  MMA E   1       9.135  -6.940  27.638 -1.31 -0.00    +0.000    31.276
+ATOM     11  C7  MMA E   1       4.947  -3.062  30.770 -0.28 +0.00    +0.000    31.276
+ATOM     12  O1  MMA E   1       5.874  -4.070  30.470 -0.47 -0.00    +0.000    31.276
+ATOM     13  O3  MMA E   1       6.368  -8.161  31.480 -0.35 +0.00    +0.000    31.276
+ATOM     14  C1  MAN E   2       6.984  -9.186  30.713 -0.36 -0.00    +0.000    31.276
+ATOM     15  C2  MAN E   2       5.961  -9.812  29.755 -0.31 -0.00    +0.000    31.276
+ATOM     16  C3  MAN E   2       4.913 -10.569  30.558 -0.23 -0.00    +0.000    31.276
+ATOM     17  C4  MAN E   2       5.557 -11.621  31.469 -0.24 -0.00    +0.000    31.276
+ATOM     18  C5  MAN E   2       6.674 -10.987  32.316 -0.36 -0.00    +0.000    31.276
+ATOM     19  O2  MAN E   2       6.606 -10.685  28.834 -0.45 -0.00    +0.000    31.276
+ATOM     20  O3  MAN E   2       3.988 -11.186  29.686 -0.32 -0.00    +0.000    31.276
+ATOM     21  O4  MAN E   2       4.560 -12.163  32.334 -0.25 -0.00    +0.000    31.276
+ATOM     22  O5  MAN E   2       7.598 -10.219  31.497 -0.39 -0.00    +0.000    31.276
+ATOM     23  C6  MAN E   2       7.493 -12.004  33.109 -0.47 -0.00    +0.000    31.276
+ATOM     24  O6  MAN E   2       7.157 -12.006  34.490 -0.63 -0.00    +0.000    31.276
+TER
+ENDMDL
+MODEL       10
+USER    Run = 10
+USER    Cluster Rank = 5
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 50.112 A
+USER  
+USER    Estimated Free Energy of Binding    =   -8.86 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =  318.00 nM (nanomolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =  -10.36 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  -10.36 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   -1.89 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -1.89 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+USER    NEWDPF move	mannose_part.pdbqt
+USER    NEWDPF about	27.112900 -27.737000 10.004000
+USER    NEWDPF tran0	-2.376798 12.825312 29.723328
+USER    NEWDPF axisangle0	0.819025 0.246683 -0.518021 -140.884339
+USER    NEWDPF quaternion0	0.771770 0.232451 -0.488133 -0.334758
+USER    NEWDPF dihe0	75.71 89.10 49.90 -29.00 11.46 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C1  MMA E   1      -3.685  13.479  26.991 -0.31 -0.00    +0.000    50.112
+ATOM      2  C2  MMA E   1      -2.853  12.636  27.980 -0.25 -0.00    +0.000    50.112
+ATOM      3  C3  MMA E   1      -2.267  13.553  29.081 -0.24 -0.00    +0.000    50.112
+ATOM      4  C4  MMA E   1      -1.480  14.714  28.420 -0.27 -0.00    +0.000    50.112
+ATOM      5  C5  MMA E   1      -2.319  15.425  27.325 -0.31 -0.00    +0.000    50.112
+ATOM      6  O2  MMA E   1      -1.811  11.938  27.283 -0.66 -0.00    +0.000    50.112
+ATOM      7  O4  MMA E   1      -1.093  15.673  29.409 -0.29 -0.00    +0.000    50.112
+ATOM      8  O5  MMA E   1      -2.858  14.475  26.370 -0.92 -0.00    +0.000    50.112
+ATOM      9  C6  MMA E   1      -1.510  16.437  26.523 -0.32 -0.00    +0.000    50.112
+ATOM     10  O6  MMA E   1      -1.971  16.461  25.154 -0.45 -0.00    +0.000    50.112
+ATOM     11  C7  MMA E   1      -5.842  13.306  27.882 -0.42 -0.00    +0.000    50.112
+ATOM     12  O1  MMA E   1      -4.726  14.126  27.662 -0.39 -0.00    +0.000    50.112
+ATOM     13  O3  MMA E   1      -1.421  12.797  29.967 -0.22 -0.00    +0.000    50.112
+ATOM     14  C1  MAN E   2      -1.962  12.703  31.277 -0.35 -0.00    +0.000    50.112
+ATOM     15  C2  MAN E   2      -1.356  11.497  32.009 -0.38 -0.00    +0.000    50.112
+ATOM     16  C3  MAN E   2      -1.834  10.212  31.350 -0.29 -0.00    +0.000    50.112
+ATOM     17  C4  MAN E   2      -3.366  10.141  31.306 -0.22 -0.00    +0.000    50.112
+ATOM     18  C5  MAN E   2      -3.945  11.427  30.692 -0.38 -0.00    +0.000    50.112
+ATOM     19  O2  MAN E   2      -1.720  11.513  33.386 -0.69 -0.00    +0.000    50.112
+ATOM     20  O3  MAN E   2      -1.319   9.093  32.041 -0.29 -0.00    +0.000    50.112
+ATOM     21  O4  MAN E   2      -3.759   9.022  30.513 -0.28 -0.00    +0.000    50.112
+ATOM     22  O5  MAN E   2      -3.393  12.617  31.318 -0.88 -0.00    +0.000    50.112
+ATOM     23  C6  MAN E   2      -5.468  11.518  30.787 -0.38 -0.00    +0.000    50.112
+ATOM     24  O6  MAN E   2      -5.892  12.409  31.809 -1.16 -0.00    +0.000    50.112
+TER
+ENDMDL
+MODEL        2
+USER    Run = 2
+USER    Cluster Rank = 6
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 36.315 A
+USER  
+USER    Estimated Free Energy of Binding    =   -8.63 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =  474.44 nM (nanomolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =  -10.12 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  -10.12 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   -1.47 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -1.47 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+USER    NEWDPF move	mannose_part.pdbqt
+USER    NEWDPF about	27.112900 -27.737000 10.004000
+USER    NEWDPF tran0	5.389258 5.081749 7.983896
+USER    NEWDPF axisangle0	0.018013 0.994119 -0.106786 -61.434544
+USER    NEWDPF quaternion0	0.009201 0.507798 -0.054547 -0.859698
+USER    NEWDPF dihe0	-165.62 -9.92 -117.37 11.41 -156.68 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C1  MMA E   1       7.080   2.725   6.893 -0.48 -0.00    +0.000    36.315
+ATOM      2  C2  MMA E   1       6.803   4.197   7.263 -0.43 -0.00    +0.000    36.315
+ATOM      3  C3  MMA E   1       5.278   4.463   7.236 -0.43 -0.00    +0.000    36.315
+ATOM      4  C4  MMA E   1       4.705   4.038   5.859 -0.29 -0.00    +0.000    36.315
+ATOM      5  C5  MMA E   1       5.147   2.601   5.474 -0.19 -0.00    +0.000    36.315
+ATOM      6  O2  MMA E   1       7.495   5.073   6.363 -0.65 +0.00    +0.000    36.315
+ATOM      7  O4  MMA E   1       3.276   4.098   5.881 -0.32 -0.00    +0.000    36.315
+ATOM      8  O5  MMA E   1       6.586   2.444   5.575 -0.25 -0.00    +0.000    36.315
+ATOM      9  C6  MMA E   1       4.767   2.228   4.046 -0.12 -0.00    +0.000    36.315
+ATOM     10  O6  MMA E   1       3.515   1.507   4.042 -0.55 -0.00    +0.000    36.315
+ATOM     11  C7  MMA E   1       6.642   0.511   7.512 -0.56 +0.00    +0.000    36.315
+ATOM     12  O1  MMA E   1       6.440   1.869   7.795 -0.63 -0.00    +0.000    36.315
+ATOM     13  O3  MMA E   1       5.007   5.852   7.500 -0.51 -0.00    +0.000    36.315
+ATOM     14  C1  MAN E   2       5.224   6.668   6.358 -0.35 -0.00    +0.000    36.315
+ATOM     15  C2  MAN E   2       5.383   8.135   6.784 -0.41 -0.00    +0.000    36.315
+ATOM     16  C3  MAN E   2       4.058   8.651   7.326 -0.41 -0.00    +0.000    36.315
+ATOM     17  C4  MAN E   2       2.929   8.474   6.304 -0.41 -0.00    +0.000    36.315
+ATOM     18  C5  MAN E   2       2.887   7.025   5.794 -0.34 -0.00    +0.000    36.315
+ATOM     19  O2  MAN E   2       5.814   8.932   5.686 -0.22 -0.00    +0.000    36.315
+ATOM     20  O3  MAN E   2       4.179  10.013   7.682 -0.51 -0.00    +0.000    36.315
+ATOM     21  O4  MAN E   2       1.683   8.791   6.925 -1.00 -0.00    +0.000    36.315
+ATOM     22  O5  MAN E   2       4.198   6.570   5.360 -0.18 -0.00    +0.000    36.315
+ATOM     23  C6  MAN E   2       1.916   6.811   4.633 -0.30 -0.00    +0.000    36.315
+ATOM     24  O6  MAN E   2       0.567   7.053   5.009 -0.57 -0.00    +0.000    36.315
+TER
+ENDMDL
+MODEL        4
+USER    Run = 4
+USER    Cluster Rank = 7
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 37.429 A
+USER  
+USER    Estimated Free Energy of Binding    =   -7.98 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    1.42 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -9.47 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -9.47 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   -1.78 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -1.78 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+USER    NEWDPF move	mannose_part.pdbqt
+USER    NEWDPF about	27.112900 -27.737000 10.004000
+USER    NEWDPF tran0	-2.935969 -12.220565 34.103223
+USER    NEWDPF axisangle0	0.011722 0.875535 -0.483012 143.051357
+USER    NEWDPF quaternion0	0.011118 0.830415 -0.458121 0.316880
+USER    NEWDPF dihe0	-145.53 115.60 82.01 -22.42 -35.69 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C1  MMA E   1      -4.523 -13.687  36.324 -0.28 -0.00    +0.000    37.429
+ATOM      2  C2  MMA E   1      -4.356 -12.917  34.998 -0.25 -0.00    +0.000    37.429
+ATOM      3  C3  MMA E   1      -3.073 -12.052  35.056 -0.21 -0.00    +0.000    37.429
+ATOM      4  C4  MMA E   1      -3.118 -11.146  36.313 -0.35 -0.00    +0.000    37.429
+ATOM      5  C5  MMA E   1      -3.443 -11.959  37.594 -0.50 -0.00    +0.000    37.429
+ATOM      6  O2  MMA E   1      -5.512 -12.106  34.746 -0.30 -0.00    +0.000    37.429
+ATOM      7  O4  MMA E   1      -1.863 -10.481  36.486 -0.71 -0.00    +0.000    37.429
+ATOM      8  O5  MMA E   1      -4.635 -12.767  37.421 -0.46 -0.00    +0.000    37.429
+ATOM      9  C6  MMA E   1      -3.689 -11.074  38.810 -0.64 -0.00    +0.000    37.429
+ATOM     10  O6  MMA E   1      -2.435 -10.558  39.307 -0.96 -0.00    +0.000    37.429
+ATOM     11  C7  MMA E   1      -3.149 -15.389  35.492 -0.27 -0.00    +0.000    37.429
+ATOM     12  O1  MMA E   1      -3.415 -14.510  36.551 -0.88 -0.00    +0.000    37.429
+ATOM     13  O3  MMA E   1      -2.944 -11.265  33.858 -0.18 -0.00    +0.000    37.429
+ATOM     14  C1  MAN E   2      -1.613 -10.813  33.652 -0.19 -0.00    +0.000    37.429
+ATOM     15  C2  MAN E   2      -1.446 -10.314  32.210 -0.25 -0.00    +0.000    37.429
+ATOM     16  C3  MAN E   2      -1.560 -11.489  31.251 -0.40 -0.00    +0.000    37.429
+ATOM     17  C4  MAN E   2      -0.549 -12.591  31.593 -0.34 -0.00    +0.000    37.429
+ATOM     18  C5  MAN E   2      -0.649 -12.969  33.080 -0.22 -0.00    +0.000    37.429
+ATOM     19  O2  MAN E   2      -0.191  -9.661  32.048 -0.21 -0.00    +0.000    37.429
+ATOM     20  O3  MAN E   2      -1.365 -11.050  29.922 -0.63 -0.00    +0.000    37.429
+ATOM     21  O4  MAN E   2      -0.824 -13.741  30.794 -0.37 -0.00    +0.000    37.429
+ATOM     22  O5  MAN E   2      -0.608 -11.796  33.936 -0.22 -0.00    +0.000    37.429
+ATOM     23  C6  MAN E   2       0.452 -13.921  33.545 -0.26 -0.00    +0.000    37.429
+ATOM     24  O6  MAN E   2       1.007 -13.534  34.794 -0.38 -0.00    +0.000    37.429
+TER
+ENDMDL
+MODEL        9
+USER    Run = 9
+USER    Cluster Rank = 8
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 38.616 A
+USER  
+USER    Estimated Free Energy of Binding    =   -7.82 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    1.86 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -9.31 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -9.31 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   -1.67 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.49 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -1.67 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dpf
+USER    NEWDPF move	mannose_part.pdbqt
+USER    NEWDPF about	27.112900 -27.737000 10.004000
+USER    NEWDPF tran0	-3.093613 -11.157256 34.800463
+USER    NEWDPF axisangle0	0.814514 0.544221 0.200973 -104.245716
+USER    NEWDPF quaternion0	0.642920 0.429569 0.158634 -0.613970
+USER    NEWDPF dihe0	-160.52 116.89 179.97 -65.62 -22.32 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C1  MMA E   1      -1.900 -10.681  31.981 -0.30 -0.00    +0.000    38.616
+ATOM      2  C2  MMA E   1      -1.851 -10.831  33.516 -0.19 -0.00    +0.000    38.616
+ATOM      3  C3  MMA E   1      -3.231 -10.472  34.118 -0.19 -0.00    +0.000    38.616
+ATOM      4  C4  MMA E   1      -3.655  -9.061  33.633 -0.22 -0.00    +0.000    38.616
+ATOM      5  C5  MMA E   1      -3.535  -8.926  32.092 -0.20 -0.00    +0.000    38.616
+ATOM      6  O2  MMA E   1      -0.818  -9.999  34.063 -0.21 -0.00    +0.000    38.616
+ATOM      7  O4  MMA E   1      -5.004  -8.791  34.023 -0.28 -0.00    +0.000    38.616
+ATOM      8  O5  MMA E   1      -2.221  -9.328  31.625 -0.31 -0.00    +0.000    38.616
+ATOM      9  C6  MMA E   1      -3.753  -7.499  31.604 -0.27 -0.00    +0.000    38.616
+ATOM     10  O6  MMA E   1      -5.151  -7.286  31.311 -0.92 +0.00    +0.000    38.616
+ATOM     11  C7  MMA E   1      -2.736 -12.861  31.832 -0.30 -0.00    +0.000    38.616
+ATOM     12  O1  MMA E   1      -2.878 -11.522  31.442 -0.95 -0.00    +0.000    38.616
+ATOM     13  O3  MMA E   1      -3.181 -10.528  35.555 -0.27 -0.00    +0.000    38.616
+ATOM     14  C1  MAN E   2      -4.414 -10.952  36.120 -0.33 -0.00    +0.000    38.616
+ATOM     15  C2  MAN E   2      -4.196 -12.215  36.966 -0.42 -0.00    +0.000    38.616
+ATOM     16  C3  MAN E   2      -3.820 -13.375  36.056 -0.29 -0.00    +0.000    38.616
+ATOM     17  C4  MAN E   2      -4.874 -13.596  34.965 -0.29 -0.00    +0.000    38.616
+ATOM     18  C5  MAN E   2      -5.169 -12.278  34.229 -0.29 -0.00    +0.000    38.616
+ATOM     19  O2  MAN E   2      -5.369 -12.528  37.709 -0.63 -0.00    +0.000    38.616
+ATOM     20  O3  MAN E   2      -3.658 -14.554  36.817 -0.91 -0.00    +0.000    38.616
+ATOM     21  O4  MAN E   2      -4.385 -14.558  34.030 -0.30 -0.00    +0.000    38.616
+ATOM     22  O5  MAN E   2      -5.449 -11.196  35.157 -0.29 -0.00    +0.000    38.616
+ATOM     23  C6  MAN E   2      -6.345 -12.370  33.256 -0.40 -0.00    +0.000    38.616
+ATOM     24  O6  MAN E   2      -5.998 -11.936  31.949 -0.56 -0.00    +0.000    38.616
+TER
+ENDMDL
+
+
+AVSFLD: # AVS field file
+AVSFLD: #
+AVSFLD: # Created by AutoDock
+AVSFLD: #
+AVSFLD: ndim=2           # number of dimensions in the field
+AVSFLD: nspace=1         # number of physical coordinates
+AVSFLD: veclen=7         # vector size
+AVSFLD: dim1=24          # atoms
+AVSFLD: dim2=8           # conformations
+AVSFLD: data=Real       # data type (byte,integer,Real,double)
+AVSFLD: field=uniform    # field coordinate layout
+AVSFLD: label= x y z vdW Elec q RMS
+AVSFLD: variable 1 file = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dlg.pdb filetype = ascii offset = 5 stride = 12
+AVSFLD: variable 2 file = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dlg.pdb filetype = ascii offset = 6 stride = 12
+AVSFLD: variable 3 file = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dlg.pdb filetype = ascii offset = 7 stride = 12
+AVSFLD: variable 4 file = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dlg.pdb filetype = ascii offset = 8 stride = 12
+AVSFLD: variable 5 file = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dlg.pdb filetype = ascii offset = 9 stride = 12
+AVSFLD: variable 6 file = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dlg.pdb filetype = ascii offset = 10 stride = 12
+AVSFLD: variable 7 file = D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/1qdo_mannose_part.dlg.pdb filetype = ascii offset = 11 stride = 12
+AVSFLD: # end of file
+
+>>> Closing the docking parameter file (DPF)...
+This docking finished at:			4:35 08" p.m., 05/09/2021
+
+
+________________________________________________________________________________
+
+D:/DrugDiscovery/molecular-docking/1QDO_08.05.21/autodock4.exe: Successful Completion on "DESKTOP-MNK283J"
+
+Real= 3m 22.09s,  CPU= 3m 21.98s,  System= 0.11s
+________________________________________________________________________________
+
