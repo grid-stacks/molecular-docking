@@ -1,0 +1,53 @@
+REMARK   BIOVIA PDB file
+REMARK   Created:  2021-05-09T16:14:51Z
+CRYST1   60.410   64.530  126.960  90.00  93.21  90.00 P21        
+HETATM    1  C1  MMA E   1      29.074 -29.862  11.118  1.00 66.32           C  
+HETATM    2  C2  MMA E   1      28.494 -28.442  10.951  1.00 60.05           C  
+HETATM    3  C3  MMA E   1      27.766 -28.334   9.589  1.00 57.44           C  
+HETATM    4  C4  MMA E   1      28.731 -28.761   8.453  1.00 70.09           C  
+HETATM    5  C5  MMA E   1      29.400 -30.128   8.754  1.00 69.04           C  
+HETATM    6  C6  MMA E   1      30.498 -30.482   7.758  1.00 72.00           C  
+HETATM    7  C7  MMA E   1      28.472 -32.104  11.411  1.00 39.77           C  
+HETATM    8  O1  MMA E   1      28.052 -30.814  11.058  1.00 56.11           O  
+HETATM    9  O2  MMA E   1      29.538 -27.464  11.056  1.00 46.72           O  
+HETATM   10  O3  MMA E   1      27.288 -26.992   9.381  1.00 51.39           O  
+HETATM   11  O4  MMA E   1      28.023 -28.849   7.213  1.00 73.26           O  
+HETATM   12  O5  MMA E   1      30.014 -30.140  10.069  1.00 70.93           O  
+HETATM   13  O6  MMA E   1      31.637 -29.615   7.952  1.00 90.18           O  
+HETATM   14  C1  MAN E   2      25.892 -26.953   9.122  1.00 43.05           C  
+HETATM   15  C2  MAN E   2      25.471 -25.530   8.728  1.00 23.58           C  
+HETATM   16  C3  MAN E   2      25.622 -24.607   9.928  1.00 34.84           C  
+HETATM   17  C4  MAN E   2      24.827 -25.122  11.134  1.00 39.41           C  
+HETATM   18  C5  MAN E   2      25.171 -26.594  11.415  1.00 36.69           C  
+HETATM   19  C6  MAN E   2      24.283 -27.238  12.479  1.00 45.15           C  
+HETATM   20  O2  MAN E   2      24.127 -25.517   8.258  1.00 45.73           O  
+HETATM   21  O3  MAN E   2      25.197 -23.302   9.591  1.00 27.97           O  
+HETATM   22  O4  MAN E   2      25.154 -24.335  12.279  1.00 40.16           O  
+HETATM   23  O5  MAN E   2      25.078 -27.406  10.213  1.00 42.74           O  
+HETATM   24  O6  MAN E   2      22.900 -27.096  12.185  1.00 42.48           O  
+TER      25      MAN E   2 
+CONECT    1    2    8   12
+CONECT    2    1    3    9
+CONECT    3    2    4   10
+CONECT    4    3    5   11
+CONECT    5    4    6   12
+CONECT    6    5   13
+CONECT    7    8
+CONECT    8    1    7
+CONECT    9    2
+CONECT   10    3   14
+CONECT   11    4
+CONECT   12    1    5
+CONECT   13    6
+CONECT   14   10   15   23
+CONECT   15   14   16   20
+CONECT   16   15   17   21
+CONECT   17   16   18   22
+CONECT   18   17   19   23
+CONECT   19   18   24
+CONECT   20   15
+CONECT   21   16
+CONECT   22   17
+CONECT   23   14   18
+CONECT   24   19
+END
