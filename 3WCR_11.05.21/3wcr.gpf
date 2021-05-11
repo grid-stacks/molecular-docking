@@ -1,18 +1,14 @@
-npts 100 100 126                     # num.grid points in xyz
-gridfld 3wcr.maps.fld                # grid_data_file
+npts 100 100 120                     # num.grid points in xyz
+gridfld 3wcr_cleaned.maps.fld        # grid_data_file
 spacing 0.5                          # spacing(A)
 receptor_types A C HD N OA           # receptor atom types
-ligand_types A C HD N NA OA SA       # ligand atom types
-receptor 3wcr.pdbqt                  # macromolecule
-gridcenter 24.382 3.884 118.522      # xyz-coordinates or auto
+ligand_types C HD OA                 # ligand atom types
+receptor 3wcr_cleaned.pdbqt          # macromolecule
+gridcenter 27.557 2.211 118.635      # xyz-coordinates or auto
 smooth 0.5                           # store minimum energy w/in rad(A)
-map 3wcr.A.map                       # atom-specific affinity map
-map 3wcr.C.map                       # atom-specific affinity map
-map 3wcr.HD.map                      # atom-specific affinity map
-map 3wcr.N.map                       # atom-specific affinity map
-map 3wcr.NA.map                      # atom-specific affinity map
-map 3wcr.OA.map                      # atom-specific affinity map
-map 3wcr.SA.map                      # atom-specific affinity map
-elecmap 3wcr.e.map                   # electrostatic potential map
-dsolvmap 3wcr.d.map              # desolvation potential map
+map 3wcr_cleaned.C.map               # atom-specific affinity map
+map 3wcr_cleaned.HD.map              # atom-specific affinity map
+map 3wcr_cleaned.OA.map              # atom-specific affinity map
+elecmap 3wcr_cleaned.e.map           # electrostatic potential map
+dsolvmap 3wcr_cleaned.d.map              # desolvation potential map
 dielectric -0.1465                   # <0, AD4 distance-dep.diel;>0, constant
