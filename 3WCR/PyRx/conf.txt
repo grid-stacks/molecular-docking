@@ -1,0 +1,8 @@
+receptor = 3wcr_cleaned.pdbqt
+exhaustiveness  = 8
+center_x = 27.5572
+center_y = 2.2111
+center_z = 118.6352
+size_x = 61.3332602519
+size_y = 59.6781919861
+size_z = 67.8673991394
