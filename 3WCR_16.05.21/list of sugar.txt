@@ -1,0 +1,4 @@
+Beta-D-Mannose, Compound CID: 439680
+Alpha-D-Mannose;Compound CID: 185698
+D-Glucose; Compound CID: 5793
+D-(+)-Maltose; Compound CID: 6255  
