@@ -1,0 +1,1 @@
+"${SCHRODINGER}/utilities/multisim" -JOBNAME desmond_md_job_2 -HOST '<dummy-gpu-host>' -maxjob 1 -cpu 1 -m desmond_md_job_2.msj -c desmond_md_job_2.cfg -description 'Molecular Dynamics' desmond_md_job_2.cms -mode umbrella -set 'stage[1].set_family.md.jlaunch_opt=["-gpu"]' -o desmond_md_job_2-out.cms -lic DESMOND_GPGPU:16

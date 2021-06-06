@@ -1,0 +1,49 @@
+
+Assigned bond orders to the workspace, while skipping residues with existing double & triple bonds
+  No bond orders were changed
+
+Added hydrogens to the Workspace structure
+
+Treated metals in the Workspace structure
+  Created disulfide bonds: []
+
+Deleted waters farther than 0.0 angstroms from hets
+
+Filled missing loops with Prime
+
+The following terminal residues have been capped: A:256, B:270, A:22, B:22
+  NEW HET 1 atoms: [7404, 7405, 7406, 7407, 7408, 7409, 7410, 7411, 7412, 7413, 7414, 7415, 7416, 7417]
+  NEW HET 2 atoms: [7432]
+  NEW HET 3 atoms: [7433]
+  NEW HET 4 atoms: [7434]
+  NEW HET 5 atoms: [7435]
+  NEW HET 6 atoms: [7436]
+  NEW HET 7 atoms: [7437]
+  NEW HET 8 atoms: [7438]
+  NEW HET 9 atoms: [7439]
+  NEW HET 10 atoms: [7440]
+  NEW HET 11 atoms: [7441, 7442, 7443, 7444, 7445, 7446, 7447, 7448, 7449, 7450, 7451, 7452, 7453, 7454]
+  NEW HET 12 atoms: [7469]
+  NEW HET 13 atoms: [7470]
+  NEW HET 14 atoms: [7471]
+  NEW HET 15 atoms: [7472]
+  NEW HET 16 atoms: [7473]
+  NEW HET 17 atoms: [7474]
+  NEW HET 18 atoms: [7475]
+  NEW HET 19 atoms: [7476]
+  NEW HET 20 atoms: [7477]
+  NEW HET 21 atoms: [7478]
+
+Found 0 waters
+
+Generated ionization/tautomeric states for all het groups
+Epik job ({job_id}) incorporated.
+
+The following atoms (4) were overlapping: (540, 692), (3612, 7218)
+Optimize H-bonds job has completed
+Deleted waters that make less than 3 H-bond to non-waters
+
+Deleted waters farther than 3.0 angstroms from hets
+
+Found 0 waters
+Restrained minimization job has completed
